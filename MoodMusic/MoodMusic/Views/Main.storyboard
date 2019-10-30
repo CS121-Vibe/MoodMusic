@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="qpH-fi-ZYw">
             <objects>
-                <viewController id="fFX-WX-QR5" sceneMemberID="viewController">
+                <viewController id="fFX-WX-QR5" customClass="ViewController" customModule="MoodMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wbJ-w5-VMp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,24 +30,36 @@
                                         <state key="normal" title="Option 1">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="optionButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="xUD-F7-C3d"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mua-Jd-tT4" userLabel="Option2">
                                         <rect key="frame" x="0.0" y="50.5" width="105.5" height="30"/>
                                         <state key="normal" title="Option 2">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="optionButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="vst-8u-qLE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-D6-T3c" userLabel="Option3">
                                         <rect key="frame" x="0.0" y="80.5" width="105.5" height="30"/>
                                         <state key="normal" title="Option 3">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="optionButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="W5p-Tx-uYd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbb-wd-5ZA" userLabel="Option4">
                                         <rect key="frame" x="0.0" y="110.5" width="105.5" height="30"/>
                                         <state key="normal" title="Option 4">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="optionButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="jzs-2U-o6e"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -55,6 +67,13 @@
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4xL-Yi-QYN"/>
                     </view>
+                    <connections>
+                        <outlet property="option1" destination="dS6-cX-WWD" id="VtN-fW-nNH"/>
+                        <outlet property="option2" destination="Mua-Jd-tT4" id="Qbb-P1-0Zg"/>
+                        <outlet property="option3" destination="cWu-D6-T3c" id="Iga-BV-17n"/>
+                        <outlet property="option4" destination="Mbb-wd-5ZA" id="fkL-Di-rH7"/>
+                        <outlet property="questionLabel" destination="nPn-HD-V0t" id="HRB-uR-bPW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzb-fF-9zf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
