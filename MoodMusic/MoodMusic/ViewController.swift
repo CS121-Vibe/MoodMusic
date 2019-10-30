@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         nextQuestion()
     }
     
+    // handles button presses
     @IBAction func optionButtonPressed(_ sender: UIButton) {
         answers.append(sender.titleLabel?.text ?? "no answer")
         
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         nextQuestion()
     }
     
+    // updates the UI to display all the info pertaining to the next question
     func updateUI() {
         option1.setTitle(allQuestions.list[questionNumber].option1, for: .normal)
         option2.setTitle(allQuestions.list[questionNumber].option2, for: .normal)
@@ -43,13 +45,13 @@ class ViewController: UIViewController {
         option4.setTitle(allQuestions.list[questionNumber].option4, for: .normal)
     }
     
+    // advances to the next question in the question list
     func nextQuestion() {
-        
         if questionNumber < 2 {
             questionLabel.text  = allQuestions.list[questionNumber].questionText
             updateUI()
         } else {
-            let alert = UIAlertController(title: "Awesome!", message: "You've finished the quiz!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Awesome!", message: "You've finished the survey!", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {(UIAlertAction) in self.startOver()
             })
             
