@@ -39,10 +39,12 @@ class ViewController: UIViewController {
     
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
-        option1.setTitle(allQuestions.list[questionNumber].option1, for: .normal)
-        option2.setTitle(allQuestions.list[questionNumber].option2, for: .normal)
-        option3.setTitle(allQuestions.list[questionNumber].option3, for: .normal)
-        option4.setTitle(allQuestions.list[questionNumber].option4, for: .normal)
+        // contains all buttons on the survey page
+        let buttons = [option1,option2,option3,option4]
+        // loops over the options for the selected questions and renames the buttons to match the options
+        for index in allQuestions.list[questionNumber].options.indices {
+            buttons[index]?.setTitle(allQuestions.list[questionNumber].options[index], for: .normal)
+        }
     }
     
     // advances to the next question in the question list
