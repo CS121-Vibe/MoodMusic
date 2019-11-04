@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFX-WX-QR5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFX-WX-QR5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,20 +12,20 @@
             <objects>
                 <viewController id="fFX-WX-QR5" customClass="ViewController" customModule="MoodMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wbJ-w5-VMp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-F5-ERO">
-                                <rect key="frame" x="20" y="184" width="374" height="538"/>
+                                <rect key="frame" x="20" y="140" width="131" height="528"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPn-HD-V0t">
-                                        <rect key="frame" x="8" y="8" width="358" height="122"/>
+                                        <rect key="frame" x="8" y="8" width="115" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS6-cX-WWD" userLabel="Option1">
-                                        <rect key="frame" x="8" y="200" width="358" height="30"/>
+                                        <rect key="frame" x="8" y="90" width="115" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="15T-nm-BEU"/>
                                         </constraints>
@@ -37,7 +37,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mua-Jd-tT4" userLabel="Option2">
-                                        <rect key="frame" x="8" y="300" width="358" height="30"/>
+                                        <rect key="frame" x="8" y="190" width="115" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="lJn-Ct-mAU"/>
                                         </constraints>
@@ -49,7 +49,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-D6-T3c" userLabel="Option3">
-                                        <rect key="frame" x="8" y="400" width="358" height="30"/>
+                                        <rect key="frame" x="8" y="290" width="115" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Tfe-Pk-bme"/>
                                         </constraints>
@@ -61,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbb-wd-5ZA" userLabel="Option4">
-                                        <rect key="frame" x="8" y="500" width="358" height="30"/>
+                                        <rect key="frame" x="8" y="390" width="115" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="z0y-Uc-kg6"/>
                                         </constraints>
@@ -72,15 +72,27 @@
                                             <action selector="optionButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="jzs-2U-o6e"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbU-FP-wb3" userLabel="SpotifyAuth">
+                                        <rect key="frame" x="8" y="490" width="115" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="l7m-89-SZe"/>
+                                        </constraints>
+                                        <state key="normal" title="Go To Auth Page"/>
+                                        <connections>
+                                            <action selector="goToSpotifyAuthPage:" destination="fFX-WX-QR5" eventType="touchUpInside" id="FxV-l9-16y"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Mbb-wd-5ZA" secondAttribute="bottom" constant="8" id="5AT-oa-hLR"/>
+                                    <constraint firstItem="fbU-FP-wb3" firstAttribute="top" secondItem="Mbb-wd-5ZA" secondAttribute="bottom" constant="70" id="9EI-Mo-VaA"/>
                                     <constraint firstItem="cWu-D6-T3c" firstAttribute="top" secondItem="Mua-Jd-tT4" secondAttribute="bottom" constant="8" id="9ow-wb-BKf"/>
                                     <constraint firstItem="nPn-HD-V0t" firstAttribute="top" secondItem="kpm-F5-ERO" secondAttribute="top" constant="8" id="Otw-PZ-qdw"/>
                                     <constraint firstItem="Mua-Jd-tT4" firstAttribute="top" secondItem="dS6-cX-WWD" secondAttribute="bottom" constant="8" id="TCU-Dz-ZU1"/>
+                                    <constraint firstAttribute="bottom" secondItem="fbU-FP-wb3" secondAttribute="bottom" constant="8" id="TuF-9H-udw"/>
                                     <constraint firstItem="dS6-cX-WWD" firstAttribute="top" secondItem="nPn-HD-V0t" secondAttribute="bottom" constant="100" id="cjX-4Z-S60"/>
                                     <constraint firstAttribute="width" constant="121.5" id="cun-Dy-o75"/>
                                     <constraint firstItem="Mbb-wd-5ZA" firstAttribute="top" secondItem="cWu-D6-T3c" secondAttribute="bottom" constant="8" id="fC5-IV-ZV7"/>
+                                    <constraint firstItem="Mbb-wd-5ZA" firstAttribute="top" secondItem="cWu-D6-T3c" secondAttribute="bottom" constant="70" id="gys-Tn-Y8k"/>
                                     <constraint firstItem="nPn-HD-V0t" firstAttribute="leading" secondItem="kpm-F5-ERO" secondAttribute="leading" constant="8" id="iFX-TF-SNh"/>
                                     <constraint firstAttribute="trailing" secondItem="nPn-HD-V0t" secondAttribute="trailing" constant="8" id="pqe-CF-eYS"/>
                                 </constraints>
@@ -96,17 +108,46 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4xL-Yi-QYN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pl6-xq-uEy"/>
                     <connections>
                         <outlet property="option1" destination="dS6-cX-WWD" id="VtN-fW-nNH"/>
                         <outlet property="option2" destination="Mua-Jd-tT4" id="Qbb-P1-0Zg"/>
                         <outlet property="option3" destination="cWu-D6-T3c" id="Iga-BV-17n"/>
                         <outlet property="option4" destination="Mbb-wd-5ZA" id="fkL-Di-rH7"/>
                         <outlet property="questionLabel" destination="nPn-HD-V0t" id="HRB-uR-bPW"/>
+                        <segue destination="qaa-jv-ypv" kind="show" identifier="SurveyToAuthSegue" id="vjP-HZ-xDv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzb-fF-9zf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="-180.13392857142856"/>
+        </scene>
+        <!--Spotify Auth View Controller-->
+        <scene sceneID="AzQ-CL-Snp">
+            <objects>
+                <viewController id="qaa-jv-ypv" customClass="SpotifyAuthViewController" customModule="MoodMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLH-VP-tUY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgS-7X-4i5">
+                                <rect key="frame" x="190" y="433" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="toSurvey:" destination="qaa-jv-ypv" eventType="touchUpInside" id="tRo-Mt-wIF"/>
+                                    <segue destination="fFX-WX-QR5" kind="show" id="xY5-py-dEG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91042006015777588" green="0.48898500204086304" blue="0.41579663753509521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Uth-gb-wh3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W6H-Hd-t3T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZ8-en-ni8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="-180"/>
         </scene>
     </scenes>
 </document>

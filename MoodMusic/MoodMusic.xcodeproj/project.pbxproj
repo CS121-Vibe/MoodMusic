@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		878A69EC2370B39D00BCDEC4 /* SpotifyAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878A69EB2370B39D00BCDEC4 /* SpotifyAuthViewController.swift */; };
 		87A3395C23680D7E00C2A2E0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A3395B23680D7E00C2A2E0 /* Question.swift */; };
 		87A33960236810E600C2A2E0 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A3395F236810E600C2A2E0 /* QuestionBank.swift */; };
 		87A339622368135D00C2A2E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A339612368135D00C2A2E0 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		878A69EB2370B39D00BCDEC4 /* SpotifyAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthViewController.swift; sourceTree = "<group>"; };
 		87A3395B23680D7E00C2A2E0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		87A3395F236810E600C2A2E0 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		87A339612368135D00C2A2E0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				87CEED1A23690BBB005DCF00 /* ViewController.swift */,
 				87FD6F102367F0CF00386462 /* SceneDelegate.swift */,
 				87FD6F0E2367F0CF00386462 /* AppDelegate.swift */,
+				878A69EB2370B39D00BCDEC4 /* SpotifyAuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				87CEED1B23690BBB005DCF00 /* ViewController.swift in Sources */,
 				87A3395C23680D7E00C2A2E0 /* Question.swift in Sources */,
 				87FD6F0F2367F0CF00386462 /* AppDelegate.swift in Sources */,
+				878A69EC2370B39D00BCDEC4 /* SpotifyAuthViewController.swift in Sources */,
 				87A33960236810E600C2A2E0 /* QuestionBank.swift in Sources */,
 				87FD6F112367F0CF00386462 /* SceneDelegate.swift in Sources */,
 			);

@@ -37,6 +37,15 @@ class ViewController: UIViewController {
         nextQuestion()
     }
     
+    @IBAction func goToSpotifyAuthPage(_ sender: UIButton) {
+        performSegue(withIdentifier: "SurveyToAuthSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var spotifyAuthViewController = segue.destination as! SpotifyAuthViewController
+    }
+    
+    
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
         option1.setTitle(allQuestions.list[questionNumber].option1, for: .normal)
