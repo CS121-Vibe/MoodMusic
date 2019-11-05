@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     
     let allQuestions = QuestionBank()
@@ -27,11 +27,35 @@ class ViewController: UIViewController {
         
         
     }
-    
+    //action function of survey button at the home page. it takes user from home page to survey
     @IBAction func surveyButtonPressed(_ sender: UIButton) {
         nextQuestion()
     }
-    
+    //action function of camera button at the home page. it takes user from home page to camera
+    @IBAction func cameraButtonPressed(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let vc = UIImagePickerController()
+            vc.sourceType = .camera
+            vc.allowsEditing = true
+            vc.delegate = self
+            present(vc, animated: true)
+        }
+        else{
+            print("camera is not available")
+        }
+    }
+    //gets called by the image picker when an image was selected. You need to read it out of the info dictionary using the key .editedImage, but then you have a UIImage that you can do whatever you want with
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+
+        guard let image = info[.editedImage] as? UIImage else {
+            print("No image found")
+            return
+        }
+
+        // print out the image size as a test
+        print(image.size)
+    }
     // handles button presses
     @IBAction func optionButtonPressed(_ sender: UIButton) {
         answers.append(sender.titleLabel?.text ?? "no answer")
