@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     
     // advances to the next question in the question list
     func nextQuestion() {
-        if questionNumber < 2 {
+        if questionNumber < 4 {
             questionLabel.text  = allQuestions.list[questionNumber].questionText
             updateUI()
         } else {
