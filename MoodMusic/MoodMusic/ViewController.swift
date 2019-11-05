@@ -39,17 +39,24 @@ class ViewController: UIViewController {
     
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
+        //magic numbers
         let screenSize: CGRect = UIScreen.main.bounds
         var btnY = Int(screenSize.height)/2
         let btnHeight = 40
+        
+        //clears screen to add the new question
         for view in self.view.subviews{
                 view.removeFromSuperview()
         }
+        
+        // add the text of the question at the top
         let question = UILabel()
         question.text  = allQuestions.list[questionNumber].questionText
         question.frame = CGRect(x: (Int(screenSize.width)/2)-200, y: 100, width: 400, height: 150)
         question.textAlignment = NSTextAlignment.center
         self.view.addSubview(question)
+        
+        //add a number of buttons to represent the number of choices for the questions
         for index in allQuestions.list[questionNumber].options.indices {
             let btn = UIButton()
             btn.setTitle(allQuestions.list[questionNumber].options[index], for: .normal)
@@ -60,12 +67,7 @@ class ViewController: UIViewController {
             btn.addTarget(self, action: #selector(self.optionButtonPressed(_:)), for: UIControl.Event.touchUpInside)
             self.view.addSubview(btn)
         }
-        // contains all buttons on the survey page
-        //let buttons = [option1,option2,option3,option4]
-        // loops over the options for the selected questions and renames the buttons to match the options
-        //for index in allQuestions.list[questionNumber].options.indices {
-            //buttons[index]?.setTitle(allQuestions.list//[questionNumber].options[index], for: .normal)
-        //}
+        
     }
     
     // advances to the next question in the question list

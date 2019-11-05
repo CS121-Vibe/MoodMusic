@@ -87,7 +87,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="kpm-F5-ERO" firstAttribute="leading" secondItem="4xL-Yi-QYN" secondAttribute="leading" constant="20" id="030-eB-D0w"/>
                             <constraint firstItem="kpm-F5-ERO" firstAttribute="top" secondItem="4xL-Yi-QYN" secondAttribute="top" constant="140" id="B1V-ZV-lRV"/>
