@@ -75,19 +75,19 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Mbb-wd-5ZA" secondAttribute="bottom" constant="8" id="5AT-oa-hLR"/>
-                                    <constraint firstItem="cWu-D6-T3c" firstAttribute="top" secondItem="Mua-Jd-tT4" secondAttribute="bottom" constant="8" id="9ow-wb-BKf"/>
+                                    <constraint firstItem="cWu-D6-T3c" firstAttribute="top" secondItem="Mua-Jd-tT4" secondAttribute="bottom" constant="4" id="9ow-wb-BKf"/>
                                     <constraint firstItem="nPn-HD-V0t" firstAttribute="top" secondItem="kpm-F5-ERO" secondAttribute="top" constant="8" id="Otw-PZ-qdw"/>
-                                    <constraint firstItem="Mua-Jd-tT4" firstAttribute="top" secondItem="dS6-cX-WWD" secondAttribute="bottom" constant="8" id="TCU-Dz-ZU1"/>
+                                    <constraint firstItem="Mua-Jd-tT4" firstAttribute="top" secondItem="dS6-cX-WWD" secondAttribute="bottom" constant="4" id="TCU-Dz-ZU1"/>
                                     <constraint firstItem="dS6-cX-WWD" firstAttribute="top" secondItem="nPn-HD-V0t" secondAttribute="bottom" constant="100" id="cjX-4Z-S60"/>
                                     <constraint firstAttribute="width" constant="121.5" id="cun-Dy-o75"/>
-                                    <constraint firstItem="Mbb-wd-5ZA" firstAttribute="top" secondItem="cWu-D6-T3c" secondAttribute="bottom" constant="8" id="fC5-IV-ZV7"/>
+                                    <constraint firstItem="Mbb-wd-5ZA" firstAttribute="top" secondItem="cWu-D6-T3c" secondAttribute="bottom" constant="4" id="fC5-IV-ZV7"/>
                                     <constraint firstItem="nPn-HD-V0t" firstAttribute="leading" secondItem="kpm-F5-ERO" secondAttribute="leading" constant="8" id="iFX-TF-SNh"/>
                                     <constraint firstAttribute="trailing" secondItem="nPn-HD-V0t" secondAttribute="trailing" constant="8" id="pqe-CF-eYS"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="kpm-F5-ERO" firstAttribute="leading" secondItem="4xL-Yi-QYN" secondAttribute="leading" constant="20" id="030-eB-D0w"/>
                             <constraint firstItem="kpm-F5-ERO" firstAttribute="top" secondItem="4xL-Yi-QYN" secondAttribute="top" constant="140" id="B1V-ZV-lRV"/>

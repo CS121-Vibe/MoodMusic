@@ -39,19 +39,45 @@ class ViewController: UIViewController {
     
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
-        option1.setTitle(allQuestions.list[questionNumber].option1, for: .normal)
-        option2.setTitle(allQuestions.list[questionNumber].option2, for: .normal)
-        option3.setTitle(allQuestions.list[questionNumber].option3, for: .normal)
-        option4.setTitle(allQuestions.list[questionNumber].option4, for: .normal)
+        //magic numbers
+        let screenSize: CGRect = UIScreen.main.bounds
+        var btnY = Int(screenSize.height)/2
+        let btnHeight = 40
+        
+        //clears screen to add the new question
+        for view in self.view.subviews{
+                view.removeFromSuperview()
+        }
+        
+        // add the text of the question at the top
+        let question = UILabel()
+        question.text  = allQuestions.list[questionNumber].questionText
+        question.frame = CGRect(x: (Int(screenSize.width)/2)-200, y: 100, width: 400, height: 150)
+        question.textAlignment = NSTextAlignment.center
+        self.view.addSubview(question)
+        
+        //add a number of buttons to represent the number of choices for the questions
+        for index in allQuestions.list[questionNumber].options.indices {
+            let btn = UIButton()
+            btn.setTitle(allQuestions.list[questionNumber].options[index], for: .normal)
+            btn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            btn.frame = CGRect(x: (Int(screenSize.width)/2)-100, y: btnY, width: 200, height: btnHeight)
+            btn.contentMode = UIView.ContentMode.scaleToFill
+            btnY += btnHeight + 5
+            btn.addTarget(self, action: #selector(self.optionButtonPressed(_:)), for: UIControl.Event.touchUpInside)
+            self.view.addSubview(btn)
+        }
+        
     }
     
     // advances to the next question in the question list
     func nextQuestion() {
-        if questionNumber < 2 {
-            questionLabel.text  = allQuestions.list[questionNumber].questionText
+        if questionNumber < 4 {
+            //questionLabel.text  = allQuestions.list[questionNumber].questionText
             updateUI()
         } else {
-            let alert = UIAlertController(title: "Awesome!", message: "You've finished the survey!", preferredStyle: .alert)
+            print(answers[0])
+            let alert = UIAlertController(title: "Awesome! you have chosen", message:  answers.joined(separator: " "), preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {(UIAlertAction) in self.startOver()
             })
             
