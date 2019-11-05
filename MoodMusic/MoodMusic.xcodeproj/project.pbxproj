@@ -11,7 +11,10 @@
 		87A3395C23680D7E00C2A2E0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A3395B23680D7E00C2A2E0 /* Question.swift */; };
 		87A33960236810E600C2A2E0 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A3395F236810E600C2A2E0 /* QuestionBank.swift */; };
 		87A339622368135D00C2A2E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A339612368135D00C2A2E0 /* Main.storyboard */; };
+		87CDFCEB23712A65008DC205 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CDFCEA23712A65008DC205 /* SpotifyiOS.framework */; };
 		87CEED1B23690BBB005DCF00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CEED1A23690BBB005DCF00 /* ViewController.swift */; };
+		87F7B3AD23716E1800583810 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7B3AC23716E1800583810 /* Constants.swift */; };
+		87F7B3AF237172F100583810 /* ConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7B3AE237172F100583810 /* ConnectButton.swift */; };
 		87FD6F0F2367F0CF00386462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FD6F0E2367F0CF00386462 /* AppDelegate.swift */; };
 		87FD6F112367F0CF00386462 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FD6F102367F0CF00386462 /* SceneDelegate.swift */; };
 		87FD6F182367F0D100386462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FD6F172367F0D100386462 /* Assets.xcassets */; };
@@ -22,7 +25,11 @@
 		87A3395B23680D7E00C2A2E0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		87A3395F236810E600C2A2E0 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		87A339612368135D00C2A2E0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		87CDFCEA23712A65008DC205 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = Frameworks/SpotifyiOS.framework; sourceTree = "<group>"; };
+		87CDFCEC23712AA8008DC205 /* MoodMusic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoodMusic-Bridging-Header.h"; sourceTree = "<group>"; };
 		87CEED1A23690BBB005DCF00 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = MoodMusic/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		87F7B3AC23716E1800583810 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		87F7B3AE237172F100583810 /* ConnectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectButton.swift; sourceTree = "<group>"; };
 		87FD6F0B2367F0CF00386462 /* MoodMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FD6F0E2367F0CF00386462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		87FD6F102367F0CF00386462 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87CDFCEB23712A65008DC205 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,8 +52,10 @@
 		87A3395823680CB400C2A2E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				87F7B3AE237172F100583810 /* ConnectButton.swift */,
 				87A3395B23680D7E00C2A2E0 /* Question.swift */,
 				87A3395F236810E600C2A2E0 /* QuestionBank.swift */,
+				87F7B3AC23716E1800583810 /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -75,6 +85,7 @@
 			children = (
 				87FD6F0D2367F0CF00386462 /* MoodMusic */,
 				87FD6F0C2367F0CF00386462 /* Products */,
+				87CDFCEC23712AA8008DC205 /* MoodMusic-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +100,7 @@
 		87FD6F0D2367F0CF00386462 /* MoodMusic */ = {
 			isa = PBXGroup;
 			children = (
+				87CDFCEA23712A65008DC205 /* SpotifyiOS.framework */,
 				87FD6F1C2367F0D100386462 /* Info.plist */,
 				87A3395A23680CC100C2A2E0 /* Controllers */,
 				87A3395923680CBD00C2A2E0 /* Views */,
@@ -129,6 +141,7 @@
 				TargetAttributes = {
 					87FD6F0A2367F0CE00386462 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -171,6 +184,8 @@
 				87A3395C23680D7E00C2A2E0 /* Question.swift in Sources */,
 				87FD6F0F2367F0CF00386462 /* AppDelegate.swift in Sources */,
 				878A69EC2370B39D00BCDEC4 /* SpotifyAuthViewController.swift in Sources */,
+				87F7B3AF237172F100583810 /* ConnectButton.swift in Sources */,
+				87F7B3AD23716E1800583810 /* Constants.swift in Sources */,
 				87A33960236810E600C2A2E0 /* QuestionBank.swift in Sources */,
 				87FD6F112367F0CF00386462 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,8 +312,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X577Y9HNX6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoodMusic/Frameworks",
+				);
 				INFOPLIST_FILE = MoodMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +326,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vibe.MoodMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoodMusic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,8 +337,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X577Y9HNX6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoodMusic/Frameworks",
+				);
 				INFOPLIST_FILE = MoodMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,6 +351,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vibe.MoodMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoodMusic-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
