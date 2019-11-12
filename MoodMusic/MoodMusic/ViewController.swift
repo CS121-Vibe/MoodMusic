@@ -118,14 +118,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             //questionLabel.text  = allQuestions.list[questionNumber].questionText
             updateUI()
         } else {
-            print(answers[0])
-            let alert = UIAlertController(title: "Awesome! you have chosen", message:  answers.joined(separator: " "), preferredStyle: .alert)
-            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {(UIAlertAction) in self.startOver()
-            })
-            
-            alert.addAction(restartAction)
-            
-            present(alert, animated: true, completion: nil)
+            viewPlaylists()
         }
     
     }
@@ -136,7 +129,60 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         answers = [String]()
     }
     
+    // function views suggested playlists after user fills in the form
 
+    func viewPlaylists(){
+        // magic number
+        let screenSize: CGRect = UIScreen.main.bounds
+        let playlistHeight = Int(((screenSize.height-150)/3))
+        //clears screen to add the new question
+        for view in self.view.subviews{
+                view.removeFromSuperview()
+        }
+        //add three suggestions
+        for s in 1...3{
+            //add the label
+            let label = UILabel()
+            label.text  = "Playlist " + String(s)
+            label.frame = CGRect(x:20, y: 30+(playlistHeight*(s-1)), width: 400, height: 150)
+            label.font = UIFont.boldSystemFont(ofSize: 32.0)
+            self.view.addSubview(label)
+            
+            //add the picture
+            let pic = #imageLiteral(resourceName: "default-album-art.png")
+            let imageView = UIImageView(image: pic)
+            imageView.frame = CGRect(x:20, y: 130+(playlistHeight*(s-1)), width: Int(screenSize.width/2)-30, height: Int(screenSize.width/2)-30)
+            self.view.addSubview(imageView)
 
+            // add the view button
+            let viewBtn = UIButton()
+            viewBtn.setTitle("View", for: .normal)
+            viewBtn.backgroundColor = UIColor.gray
+            viewBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            viewBtn.titleLabel?.font =  .systemFont(ofSize: 22)
+            viewBtn.frame = CGRect(x: Int(screenSize.width/2)+20, y: 130+(playlistHeight*(s-1)), width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
+            viewBtn.contentMode = UIView.ContentMode.scaleToFill
+            viewBtn.addTarget(self, action: #selector(self.viewButtonPressed(_:)), for: UIControl.Event.touchUpInside)
+            self.view.addSubview(viewBtn)
+            
+            // add the play button
+            let playBtn = UIButton()
+            playBtn.setTitle("Play", for: .normal)
+            playBtn.backgroundColor = UIColor.gray
+            playBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            playBtn.titleLabel?.font =  .systemFont(ofSize: 22)
+            playBtn.frame = CGRect(x: Int(screenSize.width/2)+20, y: 130+(playlistHeight*(s-1)) + Int(screenSize.width/4)-30, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
+            playBtn.contentMode = UIView.ContentMode.scaleToFill
+            playBtn.addTarget(self, action: #selector(self.playButtonPressed(_:)), for: UIControl.Event.touchUpInside)
+            self.view.addSubview(playBtn)
+        }
+    }
+    //user wants to view songs in the playlist
+    @IBAction func viewButtonPressed(_ sender: UIButton){
+    
+    }
+    //user wants to listen to playlist
+    @IBAction func playButtonPressed(_ sender: UIButton){
+    
+    }
 }
-
