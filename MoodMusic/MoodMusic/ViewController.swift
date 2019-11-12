@@ -94,12 +94,12 @@ class ViewController: UIViewController {
             self.view.addSubview(btn)
         }
         
-        // adds a connect button at the bottom of the thing as a proof of concept for navigating to the connect page
-       let authButton = SpotifyLoginButton(viewController: self, scopes: [.streaming, .userLibraryRead])
-        btnY += btnHeight
-        authButton.frame = CGRect(x: (Int(screenSize.width)/2)-100, y: btnY, width: 200, height: btnHeight)
-        authButton.contentMode = UIView.ContentMode.scaleToFill
-        self.view.addSubview(authButton)
+//        // adds a connect button at the bottom of the thing as a proof of concept for navigating to the connect page
+//       let authButton = SpotifyLoginButton(viewController: self, scopes: [.streaming, .userLibraryRead])
+//        btnY += btnHeight
+//        authButton.frame = CGRect(x: (Int(screenSize.width)/2)-100, y: btnY, width: 200, height: btnHeight)
+//        authButton.contentMode = UIView.ContentMode.scaleToFill
+//        self.view.addSubview(authButton)
         
         
     }
