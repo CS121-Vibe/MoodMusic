@@ -1,0 +1,4 @@
+target 'MoodMusic' do
+	source 'https://github.com/CocoaPods/Specs.git'
+	pod 'SpotifyLogin', '~> 0.1'
+end

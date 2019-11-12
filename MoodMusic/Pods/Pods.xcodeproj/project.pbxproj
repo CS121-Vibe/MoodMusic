@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		007E7865C8A3C303C3B35156B05C6B13 /* SessionLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C860D14831410D8CAFE7767F28107F /* SessionLocalStorage.swift */; };
+		1EFBC09149DC6C81AD83498E2C451869 /* SpotifyLogin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 665A3FDB014B6ADC77CA7966A59C9C96 /* SpotifyLogin-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5F136C444BC50296CA97E60BF3D04640 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD355BBA949AD5E5174B757E375F89 /* Constants.swift */; };
+		61C62A5A151EA59D0629A04867EE34B4 /* Pods-MoodMusic-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FE21A18321128BC67E8910DB582DE1 /* Pods-MoodMusic-dummy.m */; };
+		824246B4EE3DE5A02527785A3D9A7CAC /* SpotifyLogin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DBDD200C821A63E0FCC2310A1BEBFE /* SpotifyLogin-dummy.m */; };
+		848948BC3562CE7493EC91ACC5C3825E /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09735061824387D93A7248653353D1 /* URLBuilder.swift */; };
+		A39A2EE0FEE0A355D213BA690B53718B /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487FD73005E92A5DD63D6D25C7879682 /* Scope.swift */; };
+		A4000D0EA17D9A0ECA5177F6B2BB4571 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BDD4C8F10F39859E4E4E92B06065FF /* Session.swift */; };
+		B1328BCD6261958EFB706188656EAE96 /* Pods-MoodMusic-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAADDB8975D39F9BFFBF732618E95A5D /* Pods-MoodMusic-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B711B46703FCC4BF491C74E064EB2640 /* SpotifyLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AF2860D9C1C23485204BA57A27910 /* SpotifyLogin.swift */; };
+		BCBDC09B7193ABE570433ADB4D83545A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073C64386EC7D8261ADE2FCDF48CB8F /* Networking.swift */; };
+		D067AC770151114063B9FD3E4FFF9B50 /* SpotifyLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32A03E1AE994B0CEE37C719D6F73B8F /* SpotifyLoginPresenter.swift */; };
+		D2BAC28BC1F2413114EE3C08ECB44103 /* SpotifyLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E05DD3CBEFCB1B7861B5623AF6BD /* SpotifyLoginButton.swift */; };
+		D99FFE5C25215B20A7A797B72BF2440B /* SpotifyLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1677D27A6730144DBD22FB4B997BDDBC /* SpotifyLogin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FC4484D736A1E29F1F41D6231A8E7F46 /* SafariDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE220B6124FDA247A25B1A9AE7AA20 /* SafariDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A11EB29C659E8B02855699396AB1A92C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3EF3F58964FDE51A71B36344F566F9B;
+			remoteInfo = SpotifyLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03C860D14831410D8CAFE7767F28107F /* SessionLocalStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionLocalStorage.swift; path = Sources/Internal/SessionLocalStorage.swift; sourceTree = "<group>"; };
+		06374EBB05CBC5FC0A719074B8B24DE7 /* Pods-MoodMusic-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MoodMusic-acknowledgements.plist"; sourceTree = "<group>"; };
+		07C63197B6597BC704A37D75C5D1E5B2 /* Pods-MoodMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoodMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		09B4A3C4B0815006681B568F9458701C /* Pods-MoodMusic-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MoodMusic-resources.sh"; sourceTree = "<group>"; };
+		1677D27A6730144DBD22FB4B997BDDBC /* SpotifyLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpotifyLogin.h; path = SpotifyLogin/SpotifyLogin.h; sourceTree = "<group>"; };
+		1FCE220B6124FDA247A25B1A9AE7AA20 /* SafariDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SafariDelegate.swift; path = Sources/Internal/SafariDelegate.swift; sourceTree = "<group>"; };
+		26CC74DF16E92C25E7F1B4CF96C0C066 /* Pods-MoodMusic-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MoodMusic-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4030E05DD3CBEFCB1B7861B5623AF6BD /* SpotifyLoginButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotifyLoginButton.swift; path = Sources/SpotifyLoginButton.swift; sourceTree = "<group>"; };
+		40BDD4C8F10F39859E4E4E92B06065FF /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Sources/Internal/Session.swift; sourceTree = "<group>"; };
+		4878F123804D0FC1862B8CC0BC30DA9E /* spotifylogo-32.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "spotifylogo-32.png"; path = "SpotifyLogin/Resources/spotifylogo-32.png"; sourceTree = "<group>"; };
+		487FD73005E92A5DD63D6D25C7879682 /* Scope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scope.swift; path = Sources/Scope.swift; sourceTree = "<group>"; };
+		4FCCCE58A30B9C84C52F51AC88211059 /* SpotifyLogin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpotifyLogin.xcconfig; sourceTree = "<group>"; };
+		62DDFDC14609F0E534570CCA9FC503EE /* SpotifyLogin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotifyLogin-prefix.pch"; sourceTree = "<group>"; };
+		665A3FDB014B6ADC77CA7966A59C9C96 /* SpotifyLogin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotifyLogin-umbrella.h"; sourceTree = "<group>"; };
+		697B6F45C7339ED6E1DBB066A3C46855 /* Pods-MoodMusic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MoodMusic.modulemap"; sourceTree = "<group>"; };
+		7A09735061824387D93A7248653353D1 /* URLBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLBuilder.swift; path = Sources/Internal/URLBuilder.swift; sourceTree = "<group>"; };
+		7E21FE4F2954192953026BAF08E32F52 /* spotifylogo-32@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "spotifylogo-32@2x.png"; path = "SpotifyLogin/Resources/spotifylogo-32@2x.png"; sourceTree = "<group>"; };
+		81FE21A18321128BC67E8910DB582DE1 /* Pods-MoodMusic-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MoodMusic-dummy.m"; sourceTree = "<group>"; };
+		9073C64386EC7D8261ADE2FCDF48CB8F /* Networking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Networking.swift; path = Sources/Internal/Networking.swift; sourceTree = "<group>"; };
+		9142080F4D50EED646D0AF918F04C7DF /* Pods-MoodMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MoodMusic.release.xcconfig"; sourceTree = "<group>"; };
+		98DBDD200C821A63E0FCC2310A1BEBFE /* SpotifyLogin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpotifyLogin-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EFD355BBA949AD5E5174B757E375F89 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Internal/Constants.swift; sourceTree = "<group>"; };
+		A79EDAD122959877F4C1BC4F5203C527 /* spotifylogo-32@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "spotifylogo-32@3x.png"; path = "SpotifyLogin/Resources/spotifylogo-32@3x.png"; sourceTree = "<group>"; };
+		C7FB240CA50194204E156D18E7205D4D /* libPods-MoodMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MoodMusic.a"; path = "libPods-MoodMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84AF2860D9C1C23485204BA57A27910 /* SpotifyLogin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotifyLogin.swift; path = Sources/SpotifyLogin.swift; sourceTree = "<group>"; };
+		EF71156CAC2EAD29ADFFD110DC4F46E1 /* libSpotifyLogin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSpotifyLogin.a; path = libSpotifyLogin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F32A03E1AE994B0CEE37C719D6F73B8F /* SpotifyLoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotifyLoginPresenter.swift; path = Sources/SpotifyLoginPresenter.swift; sourceTree = "<group>"; };
+		F914A793EF20AA96FFC9E049B8C6231C /* SpotifyLogin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SpotifyLogin.modulemap; sourceTree = "<group>"; };
+		FAADDB8975D39F9BFFBF732618E95A5D /* Pods-MoodMusic-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MoodMusic-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CCBABADC122081931442BF2AAA45B85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B80484F051FAC6F6DAB9007BD232AE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		488ABC631C26C060DC2610E6243B7490 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F914A793EF20AA96FFC9E049B8C6231C /* SpotifyLogin.modulemap */,
+				4FCCCE58A30B9C84C52F51AC88211059 /* SpotifyLogin.xcconfig */,
+				98DBDD200C821A63E0FCC2310A1BEBFE /* SpotifyLogin-dummy.m */,
+				62DDFDC14609F0E534570CCA9FC503EE /* SpotifyLogin-prefix.pch */,
+				665A3FDB014B6ADC77CA7966A59C9C96 /* SpotifyLogin-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SpotifyLogin";
+			sourceTree = "<group>";
+		};
+		64548F6ED214C7610A3673BA378A3242 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDAC9E75A04F77EF7E47B9923B665811 /* Pods-MoodMusic */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7E71C8CC9464ADB9ED5342813FF00356 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0797C4BD6F5C3474261F3BD0C5B64 /* SpotifyLogin */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BDAC9E75A04F77EF7E47B9923B665811 /* Pods-MoodMusic */ = {
+			isa = PBXGroup;
+			children = (
+				697B6F45C7339ED6E1DBB066A3C46855 /* Pods-MoodMusic.modulemap */,
+				26CC74DF16E92C25E7F1B4CF96C0C066 /* Pods-MoodMusic-acknowledgements.markdown */,
+				06374EBB05CBC5FC0A719074B8B24DE7 /* Pods-MoodMusic-acknowledgements.plist */,
+				81FE21A18321128BC67E8910DB582DE1 /* Pods-MoodMusic-dummy.m */,
+				09B4A3C4B0815006681B568F9458701C /* Pods-MoodMusic-resources.sh */,
+				FAADDB8975D39F9BFFBF732618E95A5D /* Pods-MoodMusic-umbrella.h */,
+				07C63197B6597BC704A37D75C5D1E5B2 /* Pods-MoodMusic.debug.xcconfig */,
+				9142080F4D50EED646D0AF918F04C7DF /* Pods-MoodMusic.release.xcconfig */,
+			);
+			name = "Pods-MoodMusic";
+			path = "Target Support Files/Pods-MoodMusic";
+			sourceTree = "<group>";
+		};
+		C3CA5219C2CF344367DE9C8FC5606FE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4878F123804D0FC1862B8CC0BC30DA9E /* spotifylogo-32.png */,
+				7E21FE4F2954192953026BAF08E32F52 /* spotifylogo-32@2x.png */,
+				A79EDAD122959877F4C1BC4F5203C527 /* spotifylogo-32@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C5C14E841EF41BADE9867094015CAF86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB240CA50194204E156D18E7205D4D /* libPods-MoodMusic.a */,
+				EF71156CAC2EAD29ADFFD110DC4F46E1 /* libSpotifyLogin.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				7E71C8CC9464ADB9ED5342813FF00356 /* Pods */,
+				C5C14E841EF41BADE9867094015CAF86 /* Products */,
+				64548F6ED214C7610A3673BA378A3242 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAA0797C4BD6F5C3474261F3BD0C5B64 /* SpotifyLogin */ = {
+			isa = PBXGroup;
+			children = (
+				9EFD355BBA949AD5E5174B757E375F89 /* Constants.swift */,
+				9073C64386EC7D8261ADE2FCDF48CB8F /* Networking.swift */,
+				1FCE220B6124FDA247A25B1A9AE7AA20 /* SafariDelegate.swift */,
+				487FD73005E92A5DD63D6D25C7879682 /* Scope.swift */,
+				40BDD4C8F10F39859E4E4E92B06065FF /* Session.swift */,
+				03C860D14831410D8CAFE7767F28107F /* SessionLocalStorage.swift */,
+				1677D27A6730144DBD22FB4B997BDDBC /* SpotifyLogin.h */,
+				E84AF2860D9C1C23485204BA57A27910 /* SpotifyLogin.swift */,
+				4030E05DD3CBEFCB1B7861B5623AF6BD /* SpotifyLoginButton.swift */,
+				F32A03E1AE994B0CEE37C719D6F73B8F /* SpotifyLoginPresenter.swift */,
+				7A09735061824387D93A7248653353D1 /* URLBuilder.swift */,
+				C3CA5219C2CF344367DE9C8FC5606FE6 /* Resources */,
+				488ABC631C26C060DC2610E6243B7490 /* Support Files */,
+			);
+			name = SpotifyLogin;
+			path = SpotifyLogin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32911DD1D8ADBD05142BE2A7752F2C14 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1328BCD6261958EFB706188656EAE96 /* Pods-MoodMusic-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECFC8560DF29009AA1F03CC169235E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFBC09149DC6C81AD83498E2C451869 /* SpotifyLogin-umbrella.h in Headers */,
+				D99FFE5C25215B20A7A797B72BF2440B /* SpotifyLogin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C3EF3F58964FDE51A71B36344F566F9B /* SpotifyLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B088410002DF4FA1BE6D7DEA157F5F09 /* Build configuration list for PBXNativeTarget "SpotifyLogin" */;
+			buildPhases = (
+				7ECFC8560DF29009AA1F03CC169235E4 /* Headers */,
+				6BB9212730CF68FD7DA05292A0867EC5 /* Sources */,
+				9B80484F051FAC6F6DAB9007BD232AE5 /* Frameworks */,
+				4DBD45B19ACA0A9BAB7DD7E4A364F86A /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotifyLogin;
+			productName = SpotifyLogin;
+			productReference = EF71156CAC2EAD29ADFFD110DC4F46E1 /* libSpotifyLogin.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E84F42730EB6F9AAB1AE8ACE1F131A4F /* Pods-MoodMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC2C997036D7019A07FEA1FBC2066A0 /* Build configuration list for PBXNativeTarget "Pods-MoodMusic" */;
+			buildPhases = (
+				32911DD1D8ADBD05142BE2A7752F2C14 /* Headers */,
+				C750BD45929919CDE541E5CFD81650F8 /* Sources */,
+				6CCBABADC122081931442BF2AAA45B85 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7910F0440517E81AED3BF6CDCE76AA08 /* PBXTargetDependency */,
+			);
+			name = "Pods-MoodMusic";
+			productName = "Pods-MoodMusic";
+			productReference = C7FB240CA50194204E156D18E7205D4D /* libPods-MoodMusic.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C5C14E841EF41BADE9867094015CAF86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E84F42730EB6F9AAB1AE8ACE1F131A4F /* Pods-MoodMusic */,
+				C3EF3F58964FDE51A71B36344F566F9B /* SpotifyLogin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DBD45B19ACA0A9BAB7DD7E4A364F86A /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SpotifyLogin/SpotifyLogin.modulemap",
+				"${PODS_ROOT}/Headers/Public/SpotifyLogin/SpotifyLogin-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SpotifyLogin-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SpotifyLogin/SpotifyLogin.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SpotifyLogin/SpotifyLogin-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BB9212730CF68FD7DA05292A0867EC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F136C444BC50296CA97E60BF3D04640 /* Constants.swift in Sources */,
+				BCBDC09B7193ABE570433ADB4D83545A /* Networking.swift in Sources */,
+				FC4484D736A1E29F1F41D6231A8E7F46 /* SafariDelegate.swift in Sources */,
+				A39A2EE0FEE0A355D213BA690B53718B /* Scope.swift in Sources */,
+				A4000D0EA17D9A0ECA5177F6B2BB4571 /* Session.swift in Sources */,
+				007E7865C8A3C303C3B35156B05C6B13 /* SessionLocalStorage.swift in Sources */,
+				824246B4EE3DE5A02527785A3D9A7CAC /* SpotifyLogin-dummy.m in Sources */,
+				B711B46703FCC4BF491C74E064EB2640 /* SpotifyLogin.swift in Sources */,
+				D2BAC28BC1F2413114EE3C08ECB44103 /* SpotifyLoginButton.swift in Sources */,
+				D067AC770151114063B9FD3E4FFF9B50 /* SpotifyLoginPresenter.swift in Sources */,
+				848948BC3562CE7493EC91ACC5C3825E /* URLBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C750BD45929919CDE541E5CFD81650F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61C62A5A151EA59D0629A04867EE34B4 /* Pods-MoodMusic-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7910F0440517E81AED3BF6CDCE76AA08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpotifyLogin;
+			target = C3EF3F58964FDE51A71B36344F566F9B /* SpotifyLogin */;
+			targetProxy = A11EB29C659E8B02855699396AB1A92C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0CDD3915BFAAA29A1954739DA504BAD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9142080F4D50EED646D0AF918F04C7DF /* Pods-MoodMusic.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MoodMusic/Pods-MoodMusic.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7738DEBAC143A6B56AE389F6BF193EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FCCCE58A30B9C84C52F51AC88211059 /* SpotifyLogin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SpotifyLogin/SpotifyLogin-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/SpotifyLogin/SpotifyLogin.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SpotifyLogin;
+				PRODUCT_NAME = SpotifyLogin;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		804E13245C9FBBE6A340C555CA8B2B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F00B9ED02E9B21BB00E3C94D7AE846B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07C63197B6597BC704A37D75C5D1E5B2 /* Pods-MoodMusic.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MoodMusic/Pods-MoodMusic.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F628999A167400A2FB541A317E0BE130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FCCCE58A30B9C84C52F51AC88211059 /* SpotifyLogin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SpotifyLogin/SpotifyLogin-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/SpotifyLogin/SpotifyLogin.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SpotifyLogin;
+				PRODUCT_NAME = SpotifyLogin;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FC2C997036D7019A07FEA1FBC2066A0 /* Build configuration list for PBXNativeTarget "Pods-MoodMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00B9ED02E9B21BB00E3C94D7AE846B9 /* Debug */,
+				0CDD3915BFAAA29A1954739DA504BAD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804E13245C9FBBE6A340C555CA8B2B4C /* Debug */,
+				510B057D2E9F059C50D52DA5D90F3ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B088410002DF4FA1BE6D7DEA157F5F09 /* Build configuration list for PBXNativeTarget "SpotifyLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7738DEBAC143A6B56AE389F6BF193EE3 /* Debug */,
+				F628999A167400A2FB541A317E0BE130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
