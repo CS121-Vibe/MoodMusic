@@ -56,7 +56,21 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // print out the image size as a test
         print(image.size)
     }
-    // handles button presses
+    
+    //action function of photos button at the home page. it takes user from home page to their photos album
+    @IBAction func photosButtonPressed(_ sender: UIButton) {
+        func photoLibrary()
+        {
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                let vc = UIImagePickerController()
+                vc.delegate = self;
+                vc.sourceType = .photoLibrary
+                present(vc, animated: true)
+        }
+    }
+    }
+    
+    // handles survey button presses
     @IBAction func optionButtonPressed(_ sender: UIButton) {
         answers.append(sender.titleLabel?.text ?? "no answer")
         

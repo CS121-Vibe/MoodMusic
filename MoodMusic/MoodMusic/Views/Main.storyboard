@@ -11,11 +11,11 @@
         <scene sceneID="qpH-fi-ZYw">
             <objects>
                 <viewController id="fFX-WX-QR5" customClass="ViewController" customModule="MoodMusic" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wbJ-w5-VMp">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="wbJ-w5-VMp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-F5-ERO">
+                            <stackView opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-F5-ERO">
                                 <rect key="frame" x="20" y="184" width="374" height="538"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121.5" id="cun-Dy-o75"/>
@@ -29,6 +29,15 @@
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="cameraButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Y38-js-Dyv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-8a-WIa">
+                                <rect key="frame" x="20" y="494" width="366" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Photos"/>
+                                <connections>
+                                    <action selector="photosButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="R1q-qp-Ct6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNt-sx-Ced">
