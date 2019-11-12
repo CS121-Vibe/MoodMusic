@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpotifyLogin
 
 class ViewController: UIViewController {
     
@@ -15,17 +16,22 @@ class ViewController: UIViewController {
     var questionNumber : Int = 0
     var answers = [String]()
     
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var option1: UIButton!
-    @IBOutlet weak var option2: UIButton!
-    @IBOutlet weak var option3: UIButton!
-    @IBOutlet weak var option4: UIButton!
+    var loginButton: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         nextQuestion()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showAlert),
+                                               name: .SpotifyLoginSuccessful,
+                                               object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // handles button presses
@@ -35,10 +41,31 @@ class ViewController: UIViewController {
         questionNumber += 1
         
         nextQuestion()
+        
+    }
+    
+    // handles the connect button press
+    @IBAction func showAlert(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Connect Button Clicked", message: "yeah you clicked it", preferredStyle: .alert)
+        let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {(UIAlertAction) in self.startOver()
+        })
+        
+        alert.addAction(restartAction)
+        present(alert, animated: true, completion: nil)
     }
     
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
+        
+        // chech to see if spotify is authed
+        SpotifyLogin.shared.getAccessToken { (accessToken, error) in
+            if error != nil {
+                print(error)
+            } else {
+                print("user is logged in")
+            }
+        }
+        
         //magic numbers
         let screenSize: CGRect = UIScreen.main.bounds
         var btnY = Int(screenSize.height)/2
@@ -60,13 +87,20 @@ class ViewController: UIViewController {
         for index in allQuestions.list[questionNumber].options.indices {
             let btn = UIButton()
             btn.setTitle(allQuestions.list[questionNumber].options[index], for: .normal)
-            btn.setTitleColor(UIColor.black, for: UIControl.State.normal)
             btn.frame = CGRect(x: (Int(screenSize.width)/2)-100, y: btnY, width: 200, height: btnHeight)
             btn.contentMode = UIView.ContentMode.scaleToFill
             btnY += btnHeight + 5
             btn.addTarget(self, action: #selector(self.optionButtonPressed(_:)), for: UIControl.Event.touchUpInside)
             self.view.addSubview(btn)
         }
+        
+        // adds a connect button at the bottom of the thing as a proof of concept for navigating to the connect page
+       let authButton = SpotifyLoginButton(viewController: self, scopes: [.streaming, .userLibraryRead])
+        btnY += btnHeight
+        authButton.frame = CGRect(x: (Int(screenSize.width)/2)-100, y: btnY, width: 200, height: btnHeight)
+        authButton.contentMode = UIView.ContentMode.scaleToFill
+        self.view.addSubview(authButton)
+        
         
     }
     
@@ -92,6 +126,7 @@ class ViewController: UIViewController {
         questionNumber = 0
         nextQuestion()
         answers = [String]()
+        SpotifyLogin.shared.logout()
     }
     
 
