@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MoodMusic
 //
-//  Created by Omari Matthews on 10/28/19.
+//  Created by Omari Matthews and Nina Samko on 10/28/19.
 //  Copyright © 2019 Vibe. All rights reserved.
 //
 
@@ -176,13 +176,88 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             playBtn.addTarget(self, action: #selector(self.playButtonPressed(_:)), for: UIControl.Event.touchUpInside)
             self.view.addSubview(playBtn)
         }
+        
+        // add the 'start over' button
+        let startOverBtn = UIButton()
+        startOverBtn.setTitle("Start Over", for: .normal)
+        startOverBtn.backgroundColor = UIColor.gray
+        startOverBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        startOverBtn.titleLabel?.font =  .systemFont(ofSize: 22)
+        startOverBtn.frame = CGRect(x: Int(screenSize.width/2)+40, y: 800, width:
+            Int(screenSize.width/2)-45, height: Int(screenSize.width/4)-40)
+        startOverBtn.contentMode = UIView.ContentMode.scaleToFill
+        startOverBtn.addTarget(self, action: #selector(self.startOverButtonPressed(_:)), for: UIControl.Event.touchUpInside)
+        self.view.addSubview(startOverBtn)
     }
+    
+    // Creates a new UI page with a list of songs
+    func showSongs() {
+        // magic number
+        let screenSize: CGRect = UIScreen.main.bounds
+        let playlistHeight = Int(((screenSize.height-150)/3))
+        //clears screen to add the new question
+        for view in self.view.subviews{
+                view.removeFromSuperview()
+        }
+        
+        //add the picture
+        let pic = #imageLiteral(resourceName: "default-album-art.png")
+        let imageView = UIImageView(image: pic)
+        imageView.frame = CGRect(x:20, y: 130, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/2)-30)
+        self.view.addSubview(imageView)
+        
+        // add the go back button
+        let backBtn = UIButton()
+        backBtn.setTitle("Back", for: .normal)
+        backBtn.backgroundColor = UIColor.gray
+        backBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        backBtn.titleLabel?.font =  .systemFont(ofSize: 22)
+        backBtn.frame = CGRect(x: Int(screenSize.width/2)-200, y: 800, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
+        backBtn.contentMode = UIView.ContentMode.scaleToFill
+        backBtn.addTarget(self, action: #selector(self.backButtonPressed(_:)), for: UIControl.Event.touchUpInside)
+        self.view.addSubview(backBtn)
+  }
+ 
+    
+    // Creates a new UI page with a list of songs
+       func playSongs() {
+           // magic number
+           let screenSize: CGRect = UIScreen.main.bounds
+           let playlistHeight = Int(((screenSize.height-150)/3))
+           //clears screen to add the new question
+           for view in self.view.subviews{
+                   view.removeFromSuperview()
+           }
+            // add the go back button
+            let backBtn = UIButton()
+            backBtn.setTitle("Back", for: .normal)
+            backBtn.backgroundColor = UIColor.gray
+            backBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            backBtn.titleLabel?.font =  .systemFont(ofSize: 22)
+            backBtn.frame = CGRect(x: Int(screenSize.width/2)-200, y: 800, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
+            backBtn.contentMode = UIView.ContentMode.scaleToFill
+            backBtn.addTarget(self, action: #selector(self.backButtonPressed(_:)), for: UIControl.Event.touchUpInside)
+            self.view.addSubview(backBtn)
+    }
+    
+    // user wants to start over
+    // TODO: FIx. Does not reset the ViewController
+       @IBAction func startOverButtonPressed(_ sender: UIButton){
+
+       }
+    
+    //user wants to go back to playlists
+    @IBAction func backButtonPressed(_ sender: UIButton){
+        viewPlaylists();
+    }
+    
     //user wants to view songs in the playlist
     @IBAction func viewButtonPressed(_ sender: UIButton){
-    
+        showSongs();
     }
+
     //user wants to listen to playlist
     @IBAction func playButtonPressed(_ sender: UIButton){
-    
+        playSongs();
     }
 }
