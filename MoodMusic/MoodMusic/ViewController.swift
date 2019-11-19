@@ -119,7 +119,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
     }
     
-    // advances to the next question in the question list
+    // Advances to the next question in the question list
     func nextQuestion() {
         if questionNumber < 4 {
             //questionLabel.text  = allQuestions.list[questionNumber].questionText
@@ -130,10 +130,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     }
     
+    // Returns user to
     func startOver() {
         questionNumber = 0
         nextQuestion()
         answers = [String]()
+        
     }
     
     // function views suggested playlists after user fills in the form
@@ -163,6 +165,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             self.view.addSubview(imageView)
 
             // add the view button
+            // Specify the settings (color, size etc.)
             let viewBtn = UIButton()
             viewBtn.setTitle("View", for: .normal)
             viewBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
@@ -173,7 +176,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             viewBtn.addTarget(self, action: #selector(self.viewButtonPressed(_:)), for: UIControl.Event.touchUpInside)
             self.view.addSubview(viewBtn)
             
-            // add the play button
+            // Add the play button
+            // Specify the settings (color, size etc.)
             let playBtn = UIButton()
             playBtn.setTitle("Play", for: .normal)
             playBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
@@ -186,6 +190,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
         
         // add the 'start over' button
+        // Specify the settings (color, size etc.)
         let startOverBtn = UIButton()
         startOverBtn.setTitle("Start Over", for: .normal)
         startOverBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
@@ -208,13 +213,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 view.removeFromSuperview()
         }
         
-        //add the picture
+        // Add Title
+        let label = UILabel()
+        label.text  = "Playlist "
+        label.textColor = UIColor.white
+        label.frame = CGRect(x:20, y:30, width: 400, height: 150)
+        label.font = UIFont.boldSystemFont(ofSize: 32.0)
+        self.view.addSubview(label)
+        
+        // Add the picture
+        // Specify the location
         let pic = #imageLiteral(resourceName: "default-album-art.png")
         let imageView = UIImageView(image: pic)
         imageView.frame = CGRect(x:20, y: 130, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/2)-30)
         self.view.addSubview(imageView)
         
-        // add the go back button
+        // Add the go back button
+        // Specify the settings (color, size etc.)
         let backBtn = UIButton()
         backBtn.setTitle("Back", for: .normal)
         backBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
@@ -236,7 +251,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
            for view in self.view.subviews{
                    view.removeFromSuperview()
            }
-            // add the go back button
+            // Add the go back button
+            // Specify the settings (color, size etc.)
             let backBtn = UIButton()
             backBtn.setTitle("Back", for: .normal)
             backBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
@@ -248,23 +264,22 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             self.view.addSubview(backBtn)
     }
     
-    // user wants to start over
-    // TODO: FIx. Does not reset the ViewController
+    // Returns user to the beginning of the survey
        @IBAction func startOverButtonPressed(_ sender: UIButton){
-
+        startOver();
        }
     
-    //user wants to go back to playlists
+    // Returns user back to playlists
     @IBAction func backButtonPressed(_ sender: UIButton){
         viewPlaylists();
     }
     
-    //user wants to view songs in the playlist
+    // User wants to view songs in the playlist
     @IBAction func viewButtonPressed(_ sender: UIButton){
         showSongs();
     }
 
-    //user wants to listen to playlist
+    // User wants to listen to playlist
     @IBAction func playButtonPressed(_ sender: UIButton){
         playSongs();
     }
