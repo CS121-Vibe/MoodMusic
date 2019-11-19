@@ -21,7 +21,7 @@ class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let button = SpotifyLoginButton(viewController: self,
+        let button = MoodySpotifyLoginButton(viewController: self,
                                         scopes: [.streaming,
                                                  .userReadTop,
                                                  .playlistReadPrivate,
@@ -49,4 +49,6 @@ class LogInViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         print(SpotifyLogin.shared.username)
     }
+    
+    
 }
