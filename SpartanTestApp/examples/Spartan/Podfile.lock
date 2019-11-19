@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - AlamoRecord (1.2.2):
+    - AlamofireObjectMapper (~> 5.1)
+  - ObjectMapper (3.5.1)
+  - Spartan (1.2.1):
+    - AlamoRecord (~> 1.2.0)
+  - SpotifyLogin (0.1.6)
+
+DEPENDENCIES:
+  - Spartan
+  - SpotifyLogin (from `../..`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - AlamoRecord
+    - ObjectMapper
+    - Spartan
+
+EXTERNAL SOURCES:
+  SpotifyLogin:
+    :path: "../.."
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  AlamoRecord: 5850c563a811fdca40cd361b1b27622004bccef3
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  Spartan: 2fb99ad25f2b0e8182799f251c800091977f0a40
+  SpotifyLogin: 7ac1f609a908b7e7bfad215204b967248c9b69ef
+
+PODFILE CHECKSUM: 7c12889778aef4a26bbf419503c233327c196b8f
+
+COCOAPODS: 1.8.4

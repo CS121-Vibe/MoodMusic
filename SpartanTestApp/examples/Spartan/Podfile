@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, "11.0"
+use_frameworks!
+
+abstract_target 'SpartanPods' do
+    pod 'SpotifyLogin', :path => '../..'
+    pod 'Spartan'
+
+    target 'Spartan' do
+    end
+
+    target 'SpartanTests' do
+    end
+end
