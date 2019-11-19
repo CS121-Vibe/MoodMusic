@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SpartanPods_SpartanVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SpartanPods_SpartanVersionString[];
+FOUNDATION_EXPORT double Pods_SpartanPods_SpartanTestAppVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SpartanPods_SpartanTestAppVersionString[];
 
