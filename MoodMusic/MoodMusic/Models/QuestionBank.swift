@@ -17,12 +17,12 @@ class QuestionBank {
     init() {
         list.append(Question(text: "Where are you?",
                              options: ["Public Setting", "Living Room", "Car", "Bedroom", "Office","Outdoors"]))
-        list.append(Question(text: "How many people are there?",
+        list.append(Question(text: "How many people?",
                              options: ["1", "2-4", "5-10", ">10"]))
-        list.append(Question(text: "How loud do you want it to be?",
+        list.append(Question(text: "How loud?",
         options: ["Calm", "Loud", "Party"]))
         
-        list.append(Question(text: "How formal do you want it to be?",
+        list.append(Question(text: "How formal?",
         options: ["Formal", "Casual", "Not Formal"]))
         
     }

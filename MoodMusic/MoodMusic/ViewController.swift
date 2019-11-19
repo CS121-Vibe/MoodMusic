@@ -6,7 +6,9 @@
 //  Copyright © 2019 Vibe. All rights reserved.
 //
 
+import SpriteKit
 import UIKit
+
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -20,6 +22,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var option2: UIButton!
     @IBOutlet weak var option3: UIButton!
     @IBOutlet weak var option4: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +85,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
         //magic numbers
+        self.view.backgroundColor = UIColor(red:0.11, green:0.08, blue:0.39, alpha:1.0)
         let screenSize: CGRect = UIScreen.main.bounds
         var btnY = Int(screenSize.height)/2
         let btnHeight = 40
@@ -94,6 +98,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // add the text of the question at the top
         let question = UILabel()
         question.text  = allQuestions.list[questionNumber].questionText
+        question.textColor = UIColor.white
+        question.font = question.font.withSize(30)
         question.frame = CGRect(x: (Int(screenSize.width)/2)-200, y: 100, width: 400, height: 150)
         question.textAlignment = NSTextAlignment.center
         self.view.addSubview(question)
@@ -102,7 +108,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         for index in allQuestions.list[questionNumber].options.indices {
             let btn = UIButton()
             btn.setTitle(allQuestions.list[questionNumber].options[index], for: .normal)
-            btn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            btn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            btn.titleLabel?.font = UIFont(name: "Helvetica", size: 25)
             btn.frame = CGRect(x: (Int(screenSize.width)/2)-100, y: btnY, width: 200, height: btnHeight)
             btn.contentMode = UIView.ContentMode.scaleToFill
             btnY += btnHeight + 5
@@ -144,6 +151,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             //add the label
             let label = UILabel()
             label.text  = "Playlist " + String(s)
+            label.textColor = UIColor.white
             label.frame = CGRect(x:20, y: 30+(playlistHeight*(s-1)), width: 400, height: 150)
             label.font = UIFont.boldSystemFont(ofSize: 32.0)
             self.view.addSubview(label)
@@ -157,7 +165,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             // add the view button
             let viewBtn = UIButton()
             viewBtn.setTitle("View", for: .normal)
-            viewBtn.backgroundColor = UIColor.gray
+            viewBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
             viewBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
             viewBtn.titleLabel?.font =  .systemFont(ofSize: 22)
             viewBtn.frame = CGRect(x: Int(screenSize.width/2)+20, y: 130+(playlistHeight*(s-1)), width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
@@ -168,7 +176,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             // add the play button
             let playBtn = UIButton()
             playBtn.setTitle("Play", for: .normal)
-            playBtn.backgroundColor = UIColor.gray
+            playBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
             playBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
             playBtn.titleLabel?.font =  .systemFont(ofSize: 22)
             playBtn.frame = CGRect(x: Int(screenSize.width/2)+20, y: 130+(playlistHeight*(s-1)) + Int(screenSize.width/4)-30, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
@@ -180,7 +188,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // add the 'start over' button
         let startOverBtn = UIButton()
         startOverBtn.setTitle("Start Over", for: .normal)
-        startOverBtn.backgroundColor = UIColor.gray
+        startOverBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
         startOverBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         startOverBtn.titleLabel?.font =  .systemFont(ofSize: 22)
         startOverBtn.frame = CGRect(x: Int(screenSize.width/2)+40, y: 800, width:
@@ -209,7 +217,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // add the go back button
         let backBtn = UIButton()
         backBtn.setTitle("Back", for: .normal)
-        backBtn.backgroundColor = UIColor.gray
+        backBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
         backBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         backBtn.titleLabel?.font =  .systemFont(ofSize: 22)
         backBtn.frame = CGRect(x: Int(screenSize.width/2)-200, y: 800, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
@@ -231,7 +239,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             // add the go back button
             let backBtn = UIButton()
             backBtn.setTitle("Back", for: .normal)
-            backBtn.backgroundColor = UIColor.gray
+            backBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
             backBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
             backBtn.titleLabel?.font =  .systemFont(ofSize: 22)
             backBtn.frame = CGRect(x: Int(screenSize.width/2)-200, y: 800, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
@@ -260,4 +268,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func playButtonPressed(_ sender: UIButton){
         playSongs();
     }
+    
+
 }
