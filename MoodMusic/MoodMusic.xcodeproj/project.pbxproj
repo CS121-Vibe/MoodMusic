@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38862A782383917300804530 /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 38862A772383917200804530 /* launch.jpg */; };
+		38862A7A2383940100804530 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38862A792383940100804530 /* Launch Screen.storyboard */; };
 		8121587B237A66CB008A4E8D /* default-album-art.png in Resources */ = {isa = PBXBuildFile; fileRef = 8121587A237A66CB008A4E8D /* default-album-art.png */; };
 		87A3395C23680D7E00C2A2E0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A3395B23680D7E00C2A2E0 /* Question.swift */; };
 		87A33960236810E600C2A2E0 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A3395F236810E600C2A2E0 /* QuestionBank.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38862A772383917200804530 /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
+		38862A792383940100804530 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8121587A237A66CB008A4E8D /* default-album-art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-album-art.png"; sourceTree = "<group>"; };
 		87A3395B23680D7E00C2A2E0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		87A3395F236810E600C2A2E0 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 				87FD6F172367F0D100386462 /* Assets.xcassets */,
 				8121587A237A66CB008A4E8D /* default-album-art.png */,
 				87A339612368135D00C2A2E0 /* Main.storyboard */,
+				38862A792383940100804530 /* Launch Screen.storyboard */,
+				38862A772383917200804530 /* launch.jpg */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -77,6 +83,7 @@
 				87FD6F0C2367F0CF00386462 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		87FD6F0C2367F0CF00386462 /* Products */ = {
 			isa = PBXGroup;
@@ -155,8 +162,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38862A782383917300804530 /* launch.jpg in Resources */,
 				8121587B237A66CB008A4E8D /* default-album-art.png in Resources */,
 				87FD6F182367F0D100386462 /* Assets.xcassets in Resources */,
+				38862A7A2383940100804530 /* Launch Screen.storyboard in Resources */,
 				87A339622368135D00C2A2E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,13 +307,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X577Y9HNX6;
+				DEVELOPMENT_TEAM = TSYU3J3JHV;
 				INFOPLIST_FILE = MoodMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vibe.MoodMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vibe.Nina.MoodMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,13 +325,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X577Y9HNX6;
+				DEVELOPMENT_TEAM = TSYU3J3JHV;
 				INFOPLIST_FILE = MoodMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vibe.MoodMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vibe.Nina.MoodMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
