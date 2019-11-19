@@ -25,6 +25,8 @@ class LogInViewController: UIViewController {
                                         scopes: [.streaming,
                                                  .userReadTop,
                                                  .playlistReadPrivate,
+                                                 .playlistModifyPublic,
+                                                 .playlistModifyPrivate,
                                                  .userLibraryRead])
         self.view.addSubview(button)
         self.loginButton = button

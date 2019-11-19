@@ -6,9 +6,9 @@ abstract_target 'SpartanPods' do
     pod 'SpotifyLogin', :path => '../..'
     pod 'Spartan'
 
-    target 'Spartan' do
+    target 'SpartanTestApp' do
     end
 
-    target 'SpartanTests' do
+    target 'SpartanTestAppTests' do
     end
 end
