@@ -6,13 +6,15 @@
 //  Copyright © 2019 Vibe. All rights reserved.
 //
 
+import Foundation
 import Photos
 import SpriteKit
 import UIKit
 
+import func UIColor.moody_backgroundPurple()
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
+
     
     let allQuestions = QuestionBank()
     var questionNumber : Int = 0
@@ -36,7 +38,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func surveyButtonPressed(_ sender: UIButton) {
         nextQuestion()
     }
+    
     //action function of camera button at the home page. it takes user from home page to camera
+    // TODO: Fix camera crash. Could be due to a failure to allocate enough memory
     @IBAction func cameraButtonPressed(_ sender: UIButton) {
         
         // Check if a camera is available on the device
@@ -50,9 +54,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             // Camera controller (default IOS animation)
             self.present(vc, animated: true, completion: nil)
         }
-        else{
-            print("camera is not available")
-        }
+//        else{
+//            print("camera is not available")
+//        }
     }
     
     //action function of photos button at the home page. it takes user from home page to their photos album
@@ -73,19 +77,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imagePicked.image = image
             dismiss(animated:true, completion: nil)
         }
-
-//        picker.dismiss(animated: true)
-//
-//        guard let image = info[.editedImage] as? UIImage else {
-//            print("No image found")
-//            return
-
-        // print out the image size as a test
-        //print(image.size)
-
-    
-
-
     
    
     // handles survey button presses
@@ -100,7 +91,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
         //magic numbers
-        self.view.backgroundColor = UIColor(red:0.11, green:0.08, blue:0.39, alpha:1.0)
+        self.view.backgroundColor = moody_backgroundPurple()
         let screenSize: CGRect = UIScreen.main.bounds
         var btnY = Int(screenSize.height)/2
         let btnHeight = 40
