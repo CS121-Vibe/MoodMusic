@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="fFX-WX-QR5" customClass="ViewController" customModule="MoodMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="wbJ-w5-VMp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-F5-ERO">
-                                <rect key="frame" x="20" y="184" width="374" height="538"/>
+                                <rect key="frame" x="20" y="140" width="560" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121.5" id="cun-Dy-o75"/>
                                 </constraints>

@@ -6,6 +6,7 @@
 //  Copyright © 2019 Vibe. All rights reserved.
 //
 
+import Photos
 import SpriteKit
 import UIKit
 
@@ -17,6 +18,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     var questionNumber : Int = 0
     var answers = [String]()
     
+    @IBOutlet weak var imagePicked: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var option1: UIButton!
     @IBOutlet weak var option2: UIButton!
@@ -36,43 +38,56 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     //action function of camera button at the home page. it takes user from home page to camera
     @IBAction func cameraButtonPressed(_ sender: UIButton) {
+        
+        // Check if a camera is available on the device
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let vc = UIImagePickerController()
+            vc.delegate = self;
             vc.sourceType = .camera
-            vc.allowsEditing = true
-            vc.delegate = self
-            present(vc, animated: true)
+            
+            // Do not edit so the black screen with a frame does not appear
+            vc.allowsEditing = false
+            // Camera controller (default IOS animation)
+            self.present(vc, animated: true, completion: nil)
         }
         else{
             print("camera is not available")
         }
     }
-    //gets called by the image picker when an image was selected. You need to read it out of the info dictionary using the key .editedImage, but then you have a UIImage that you can do whatever you want with
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true)
-
-        guard let image = info[.editedImage] as? UIImage else {
-            print("No image found")
-            return
-        }
-
-        // print out the image size as a test
-        print(image.size)
-    }
     
     //action function of photos button at the home page. it takes user from home page to their photos album
     @IBAction func photosButtonPressed(_ sender: UIButton) {
-        func photoLibrary()
-        {
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-                let vc = UIImagePickerController()
-                vc.delegate = self;
-                vc.sourceType = .photoLibrary
-                present(vc, animated: true)
-        }
-    }
+        // Checks for access to Photo Library
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+             let vc = UIImagePickerController()
+             vc.delegate = self;
+             vc.sourceType = .photoLibrary
+             vc.allowsEditing = true
+            self.present(vc, animated: true, completion: nil)
+         }
     }
     
+    //gets called by the image picker when an image was selected. You need to read it out of the info dictionary using the key .editedImage, but then you have a UIImage that you can do whatever you want with
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imagePicked.image = image
+            dismiss(animated:true, completion: nil)
+        }
+
+//        picker.dismiss(animated: true)
+//
+//        guard let image = info[.editedImage] as? UIImage else {
+//            print("No image found")
+//            return
+
+        // print out the image size as a test
+        //print(image.size)
+
+    
+
+
+    
+   
     // handles survey button presses
     @IBAction func optionButtonPressed(_ sender: UIButton) {
         answers.append(sender.titleLabel?.text ?? "no answer")
@@ -283,6 +298,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func playButtonPressed(_ sender: UIButton){
         playSongs();
     }
-    
 
 }
+
+
