@@ -1,18 +1,19 @@
 {
   "images" : [
     {
-      "orientation" : "portrait",
-      "idiom" : "iphone",
       "extent" : "full-screen",
-      "minimum-system-version" : "12.0",
+      "idiom" : "iphone",
       "subtype" : "2688h",
+      "filename" : "AppIcon40x40@2x.png",
+      "minimum-system-version" : "12.0",
+      "orientation" : "portrait",
       "scale" : "3x"
     },
     {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "1792h",
-      "filename" : "launch.jpg",
+      "filename" : "AppIcon40x40@2x-1.png",
       "minimum-system-version" : "12.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -21,7 +22,7 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "2436h",
-      "filename" : "launch-2.jpg",
+      "filename" : "Icon-Small@2x-1.png",
       "minimum-system-version" : "11.0",
       "orientation" : "portrait",
       "scale" : "3x"
@@ -35,11 +36,12 @@
       "scale" : "3x"
     },
     {
-      "orientation" : "portrait",
-      "idiom" : "iphone",
       "extent" : "full-screen",
-      "minimum-system-version" : "8.0",
+      "idiom" : "iphone",
       "subtype" : "667h",
+      "filename" : "GooglePlayStore.png",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
       "scale" : "2x"
     },
     {
@@ -50,12 +52,11 @@
       "scale" : "2x"
     },
     {
-      "extent" : "full-screen",
+      "orientation" : "portrait",
       "idiom" : "iphone",
+      "extent" : "full-screen",
+      "minimum-system-version" : "7.0",
       "subtype" : "retina4",
-      "filename" : "launch-4.jpg",
-      "minimum-system-version" : "7.0",
-      "orientation" : "portrait",
       "scale" : "2x"
     },
     {
@@ -76,26 +77,6 @@
       "extent" : "full-screen",
       "subtype" : "retina4",
       "scale" : "2x"
-    },
-    {
-      "extent" : "full-screen",
-      "idiom" : "iphone",
-      "subtype" : "2688h",
-      "filename" : "launch-1.jpg",
-      "minimum-system-version" : "12.0",
-      "orientation" : "landscape",
-      "unassigned" : true,
-      "scale" : "3x"
-    },
-    {
-      "extent" : "full-screen",
-      "idiom" : "iphone",
-      "subtype" : "2436h",
-      "filename" : "launch-3.jpg",
-      "minimum-system-version" : "11.0",
-      "orientation" : "landscape",
-      "unassigned" : true,
-      "scale" : "3x"
     }
   ],
   "info" : {
