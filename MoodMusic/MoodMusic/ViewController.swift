@@ -33,6 +33,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     // Set up for the slider
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var showSliderValue: UILabel!
     
     
 
@@ -43,13 +44,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         photoSetting = AVCapturePhotoSettings.init(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
         photoSetting.isAutoStillImageStabilizationEnabled = true
         photoSetting.flashMode = .off
-        
- 
+   
     }
     
-    @objc func sliderInAction(sender: UISlider){
+    @objc func sliderValue(sender: Any){
+        self.showSliderValue.text = "\(self.slider.value)"
+    }
+    
+    @objc func slider(sender: UISlider){
         label.text = String(sender.value)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -113,9 +118,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         nextQuestion()
     }
     
-    @IBAction func sliderValue(_sender: Any) {
-        label.text = "\(slider.value)"
-    }
+    
     
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
@@ -139,9 +142,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         question.textAlignment = NSTextAlignment.center
         self.view.addSubview(question)
         
+        
         //add a number of buttons to represent the number of choices for the questions
         for index in allQuestions.list[questionNumber].options.indices {
             let btn = UIButton()
+            
+            
             btn.setTitle(allQuestions.list[questionNumber].options[index], for: .normal)
             btn.setTitleColor(UIColor.white, for: UIControl.State.normal)
             btn.titleLabel?.font = UIFont(name: "Helvetica", size: 25)
@@ -166,7 +172,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     }
     
-    // Returns user to
+    // Returns user to the start of the survey
     func startOver() {
         questionNumber = 0
         nextQuestion()
@@ -323,7 +329,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 }
 
 
-//label = UILabel()
+
+class CustomSlider: UISlider {
+override func trackRect(forBounds bounds: CGRect) -> CGRect {
+    let point = CGPoint(x: bounds.minX, y: bounds.midY)
+    return CGRect(origin: point, size: CGSize(width: bounds.width, height: 20))
+}
+
+
+
 // label.frame = CGRect(x:0, y:30, width: self.view.frame.width, height:  self.view.frame.height)
 // label.textColor = UIColor.white
 // label.backgroundColor = UIColor.purple
@@ -343,3 +357,4 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 // slider.isContinuous = true
 //
 // self.view.addSubview(slider)
+}
