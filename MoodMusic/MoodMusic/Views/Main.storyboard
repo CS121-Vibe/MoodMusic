@@ -15,53 +15,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-F5-ERO">
-                                <rect key="frame" x="20" y="184" width="374" height="538"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="launch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="T3g-RD-1Rb">
-                                        <rect key="frame" x="8" y="8" width="358" height="156"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNt-sx-Ced">
-                                        <rect key="frame" x="8" y="234" width="358" height="52"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                        <state key="normal" title="Survey">
-                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="surveyButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Lx2-yv-X3J"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-8a-WIa">
-                                        <rect key="frame" x="8" y="356" width="358" height="52"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                        <state key="normal" title="Photos">
-                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="photosButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="R1q-qp-Ct6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-jm-Fyk">
-                                        <rect key="frame" x="8" y="478" width="358" height="52"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                        <state key="normal" title="Camera">
-                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cameraButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Y38-js-Dyv"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNt-sx-Ced">
+                                <rect key="frame" x="128" y="550" width="158" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Survey">
+                                    <color key="titleColor" red="0.31778377289999998" green="0.20886421199999999" blue="0.4777624607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="surveyButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Lx2-yv-X3J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-8a-WIa">
+                                <rect key="frame" x="28" y="725" width="358" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Photos">
+                                    <color key="titleColor" red="0.3218541741" green="0.21861562130000001" blue="0.48934376239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="photosButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="R1q-qp-Ct6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-jm-Fyk">
+                                <rect key="frame" x="71" y="618" width="273" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="0.3179807067" green="0.2081764042" blue="0.47393488880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Y38-js-Dyv"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SFG-FG-03E">
+                                <rect key="frame" x="50" y="168" width="315" height="331"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="0.61282641270000004" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="kpm-F5-ERO" firstAttribute="leading" secondItem="4xL-Yi-QYN" secondAttribute="leading" constant="20" id="030-eB-D0w"/>
-                            <constraint firstItem="kpm-F5-ERO" firstAttribute="top" secondItem="4xL-Yi-QYN" secondAttribute="top" constant="140" id="B1V-ZV-lRV"/>
-                            <constraint firstItem="4xL-Yi-QYN" firstAttribute="bottom" secondItem="kpm-F5-ERO" secondAttribute="bottom" constant="140" id="B8q-e8-rp5"/>
-                            <constraint firstItem="4xL-Yi-QYN" firstAttribute="trailing" secondItem="kpm-F5-ERO" secondAttribute="trailing" constant="20" id="ctM-jo-gQg"/>
-                        </constraints>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="4xL-Yi-QYN"/>
                     </view>
                 </viewController>
@@ -71,6 +63,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch.jpg" width="1800" height="1800"/>
+        <image name="Logo.png" width="1800" height="1800"/>
     </resources>
 </document>

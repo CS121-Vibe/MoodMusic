@@ -29,7 +29,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var option2: UIButton!
     @IBOutlet weak var option3: UIButton!
     @IBOutlet weak var option4: UIButton!
-    @IBOutlet weak var back: UIButton!
+    
+    // Set up for the slider
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var slider: UISlider!
     
     
 
@@ -41,7 +44,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         photoSetting.isAutoStillImageStabilizationEnabled = true
         photoSetting.flashMode = .off
         
-        
+ 
+    }
+    
+    @objc func sliderInAction(sender: UISlider){
+        label.text = String(sender.value)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose anything else
     }
     //action function of survey button at the home page. it takes user from home page to survey
     @IBAction func surveyButtonPressed(_ sender: UIButton) {
@@ -101,6 +113,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         nextQuestion()
     }
     
+    @IBAction func sliderValue(_sender: Any) {
+        label.text = "\(slider.value)"
+    }
+    
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
         //magic numbers
@@ -134,6 +150,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             btnY += btnHeight + 5
             btn.addTarget(self, action: #selector(self.optionButtonPressed(_:)), for: UIControl.Event.touchUpInside)
             self.view.addSubview(btn)
+            
         }
         
     }
@@ -306,3 +323,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 }
 
 
+//label = UILabel()
+// label.frame = CGRect(x:0, y:30, width: self.view.frame.width, height:  self.view.frame.height)
+// label.textColor = UIColor.white
+// label.backgroundColor = UIColor.purple
+// label.textAlignment = NSTextAlignment.center
+// label.numberOfLines = 2
+// label.font = UIFont(name: "Helvetica", size: 32)
+// self.view.addSubview(label)
+//
+// slider = UISlider(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20))
+// slider.center = self.view.center
+// // Spotify's loundess metrics ranges from -60 to 0, so we will make [0,60] range for user's convenience
+// slider.minimumValue = 0
+// slider.maximumValue = 60
+// slider.value = 30
+// slider.tintColor = UIColor.cyan
+// slider.thumbTintColor = UIColor.white
+// slider.isContinuous = true
+//
+// self.view.addSubview(slider)
