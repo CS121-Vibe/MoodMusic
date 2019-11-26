@@ -6,12 +6,13 @@
 //  Copyright © 2019 Vibe. All rights reserved.
 //
 
+import AVFoundation
 import Foundation
 import Photos
 import SpriteKit
 import UIKit
 
-import func UIColor.moody_backgroundPurple()
+
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -20,17 +21,25 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     var questionNumber : Int = 0
     var answers = [String]()
     
+    var photoSetting = AVCapturePhotoSettings()
+    
     @IBOutlet weak var imagePicked: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var option1: UIButton!
     @IBOutlet weak var option2: UIButton!
     @IBOutlet weak var option3: UIButton!
     @IBOutlet weak var option4: UIButton!
+    @IBOutlet weak var back: UIButton!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+            // Configure camera
+        photoSetting = AVCapturePhotoSettings.init(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
+        photoSetting.isAutoStillImageStabilizationEnabled = true
+        photoSetting.flashMode = .off
         
         
     }
@@ -54,19 +63,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             // Camera controller (default IOS animation)
             self.present(vc, animated: true, completion: nil)
         }
-//        else{
-//            print("camera is not available")
-//        }
     }
     
     //action function of photos button at the home page. it takes user from home page to their photos album
+    // Done with the help of //https://turbofuture.com/cell-phones/Access-Photo-Camera-and-Library-in-Swift
     @IBAction func photosButtonPressed(_ sender: UIButton) {
         // Checks for access to Photo Library
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
              let vc = UIImagePickerController()
              vc.delegate = self;
              vc.sourceType = .photoLibrary
-             vc.allowsEditing = true
+             vc.allowsEditing = false
             self.present(vc, animated: true, completion: nil)
          }
     }
@@ -76,8 +83,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         imagePicked.image = image
             dismiss(animated:true, completion: nil)
+        
         }
     
+    @objc func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+
+        self.dismiss(animated: true, completion: nil)
+
+    }
    
     // handles survey button presses
     @IBAction func optionButtonPressed(_ sender: UIButton) {
@@ -91,7 +104,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
         //magic numbers
-        self.view.backgroundColor = moody_backgroundPurple()
+        self.view.backgroundColor = UIColor(red: 28.05/255.0, green: 20.4/255.0, blue: 99.45/255.0, alpha: 1.0)
         let screenSize: CGRect = UIScreen.main.bounds
         var btnY = Int(screenSize.height)/2
         let btnHeight = 40

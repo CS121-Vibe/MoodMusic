@@ -12,45 +12,50 @@
             <objects>
                 <viewController id="fFX-WX-QR5" customClass="ViewController" customModule="MoodMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="wbJ-w5-VMp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-F5-ERO">
-                                <rect key="frame" x="20" y="140" width="560" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="121.5" id="cun-Dy-o75"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="184" width="374" height="538"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="launch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="T3g-RD-1Rb">
+                                        <rect key="frame" x="8" y="8" width="358" height="156"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNt-sx-Ced">
+                                        <rect key="frame" x="8" y="234" width="358" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <state key="normal" title="Survey">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="surveyButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Lx2-yv-X3J"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-8a-WIa">
+                                        <rect key="frame" x="8" y="356" width="358" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <state key="normal" title="Photos">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="photosButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="R1q-qp-Ct6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-jm-Fyk">
+                                        <rect key="frame" x="8" y="478" width="358" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <state key="normal" title="Camera">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cameraButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Y38-js-Dyv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-jm-Fyk">
-                                <rect key="frame" x="57" y="434" width="112" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Camera"/>
-                                <connections>
-                                    <action selector="cameraButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Y38-js-Dyv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-8a-WIa">
-                                <rect key="frame" x="20" y="494" width="366" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Photos"/>
-                                <connections>
-                                    <action selector="photosButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="R1q-qp-Ct6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNt-sx-Ced">
-                                <rect key="frame" x="243" y="434" width="98" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Survey"/>
-                                <connections>
-                                    <action selector="surveyButtonPressed:" destination="fFX-WX-QR5" eventType="touchUpInside" id="Lx2-yv-X3J"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="0.61282641270000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kpm-F5-ERO" firstAttribute="leading" secondItem="4xL-Yi-QYN" secondAttribute="leading" constant="20" id="030-eB-D0w"/>
                             <constraint firstItem="kpm-F5-ERO" firstAttribute="top" secondItem="4xL-Yi-QYN" secondAttribute="top" constant="140" id="B1V-ZV-lRV"/>
@@ -65,4 +70,7 @@
             <point key="canvasLocation" x="115.94202898550725" y="-180.13392857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch.jpg" width="1800" height="1800"/>
+    </resources>
 </document>
