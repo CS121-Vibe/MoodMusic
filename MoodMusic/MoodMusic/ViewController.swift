@@ -123,7 +123,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
         //magic numbers
-        self.view.backgroundColor = UIColor(red: 28.05/255.0, green: 20.4/255.0, blue: 99.45/255.0, alpha: 1.0)
+        self.view.backgroundColor =  MoodMusicColors.moody_buttonPurple()
         let screenSize: CGRect = UIScreen.main.bounds
         var btnY = Int(screenSize.height)/2
         let btnHeight = 40
@@ -210,7 +210,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             // Specify the settings (color, size etc.)
             let viewBtn = UIButton()
             viewBtn.setTitle("View", for: .normal)
-            viewBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
             viewBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
             viewBtn.titleLabel?.font =  .systemFont(ofSize: 22)
             viewBtn.frame = CGRect(x: Int(screenSize.width/2)+20, y: 130+(playlistHeight*(s-1)), width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
@@ -222,7 +221,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             // Specify the settings (color, size etc.)
             let playBtn = UIButton()
             playBtn.setTitle("Play", for: .normal)
-            playBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
             playBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
             playBtn.titleLabel?.font =  .systemFont(ofSize: 22)
             playBtn.frame = CGRect(x: Int(screenSize.width/2)+20, y: 130+(playlistHeight*(s-1)) + Int(screenSize.width/4)-30, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
@@ -235,7 +233,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // Specify the settings (color, size etc.)
         let startOverBtn = UIButton()
         startOverBtn.setTitle("Start Over", for: .normal)
-        startOverBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
         startOverBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         startOverBtn.titleLabel?.font =  .systemFont(ofSize: 22)
         startOverBtn.frame = CGRect(x: Int(screenSize.width/2)+40, y: 800, width:
@@ -274,7 +271,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // Specify the settings (color, size etc.)
         let backBtn = UIButton()
         backBtn.setTitle("Back", for: .normal)
-        backBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
         backBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         backBtn.titleLabel?.font =  .systemFont(ofSize: 22)
         backBtn.frame = CGRect(x: Int(screenSize.width/2)-200, y: 800, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
@@ -297,7 +293,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             // Specify the settings (color, size etc.)
             let backBtn = UIButton()
             backBtn.setTitle("Back", for: .normal)
-            backBtn.backgroundColor = UIColor(red:0.64, green:0.61, blue:1.00, alpha:1.0)
             backBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
             backBtn.titleLabel?.font =  .systemFont(ofSize: 22)
             backBtn.frame = CGRect(x: Int(screenSize.width/2)-200, y: 800, width: Int(screenSize.width/2)-30, height: Int(screenSize.width/4)-40)
