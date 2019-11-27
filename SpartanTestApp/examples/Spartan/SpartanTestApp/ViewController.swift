@@ -19,7 +19,8 @@ import Spartan
 class ViewController: UIViewController {
 
     @IBOutlet weak var loggedInStackView: UIStackView!
-    @IBOutlet weak var newPlaylistName: UITextField!
+    
+    var testAnswers = ["Calm", "Office"]
     
 
     override func viewDidAppear(_ animated: Bool) {
@@ -54,7 +55,18 @@ class ViewController: UIViewController {
     // this function gets Frank Ocean's top tracks and prints them out in the console
     @IBAction func didTapFrankOceanTracks(_ sender: Any) {
         _ = Spartan.getArtistsTopTracks(artistId: "2h93pZq0e7k5yf4dywlkpM", country: .us, success: { (tracks) in
-            print(tracks)
+            var trackIds: [String] = []
+            for track in tracks {
+                trackIds.append(track.id as! String)
+            }
+            print(trackIds)
+            _ = Spartan.getAudioFeatures(trackIds: trackIds, success: { (audioFeaturesObject) in
+                for audioFeatures in audioFeaturesObject {
+                    print(audioFeatures.energy)
+                }
+            }, failure: { (error) in
+                print(error)
+            })
         }, failure: { (error) in
             print(error)
         })
@@ -63,7 +75,7 @@ class ViewController: UIViewController {
     // this function creates a new playlist
     @IBAction func didTapCreateNewPlaylist(_ sender: Any) {
         let userId = SpotifyLogin.shared.username!
-        let name = newPlaylistName.text ?? "New Playlist"
+        let name = "New Playlist"
         _ = Spartan.createPlaylist(userId: userId, name: name, isPublic: true, isCollaborative: false, success: { (playlist) in
             
             let alert = UIAlertController(title: "You've created a new playlist named: \n" + name, message: nil, preferredStyle: .alert)
@@ -74,6 +86,58 @@ class ViewController: UIViewController {
             print(error)
         })
     }
+    
+    @IBAction func didTapCreateNewPlaylistWithSongParameters(_ sender: Any) {
+        let multiplier = getMultiplierFromSurveyResults(surveyResults: testAnswers)
+        let userId = SpotifyLogin.shared.username!
+        var fitnessTracks = [TrackWithFitness]()
+        let playlistName = testAnswers.description
+        
+        // retrieve songs
+         _ = Spartan.getSavedTracks(limit: 50, offset: 0, market: .us, success: { (pagingObject) in
+            var trackIds: [String] = []
+            for track in pagingObject.items {
+                trackIds.append(track.track.id as! String)
+            }
+            
+            // filter them
+            _ = Spartan.getAudioFeatures(trackIds: trackIds, success: { (audioFeaturesObject) in
+                for audioFeatures in audioFeaturesObject {
+                    let track = TrackWithFitness(track: audioFeatures)
+                    fitnessTracks.append(track)
+                    track.calculateFitness(multipliers: multiplier)
+                }
+                
+                fitnessTracks.sort(by: >)
+                var newTrackUris = [String]()
+                print("\nPost-sorted Tracks: ")
+                for i in 0..<10 {
+                    print(fitnessTracks[i].description)
+                    newTrackUris.append(fitnessTracks[i].track.uri!)
+                }
+                print(newTrackUris)
+                
+                _ = Spartan.createPlaylist(userId: userId, name: playlistName, isPublic: true, isCollaborative: false, success: { (playlist) in
+                    _ = Spartan.addTracksToPlaylist(userId: userId, playlistId: playlist.id as! String, trackUris: newTrackUris, success: { (snapshot) in
+                        // Do something with the snapshot
+                    }, failure: { (error) in
+                        print(error)
+                    })
+                }, failure: { (error) in
+                    print(error)
+                })
+                
+            }, failure: { (error) in
+                print(error)
+            })
+            
+        }, failure: { (error) in
+            print(error)
+        })
+        // make new playlist
+        // add songs to playlist
+    }
+    
 }
 
 // Frank Ocean:

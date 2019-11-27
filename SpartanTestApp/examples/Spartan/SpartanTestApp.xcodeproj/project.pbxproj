@@ -14,6 +14,8 @@
 		34BB01751F2D17CF004D796B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34BB01741F2D17CF004D796B /* Assets.xcassets */; };
 		34BB01781F2D17CF004D796B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BB01761F2D17CF004D796B /* LaunchScreen.storyboard */; };
 		34BB01831F2D17CF004D796B /* SpartanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BB01821F2D17CF004D796B /* SpartanTests.swift */; };
+		8780CB292386536F001643F7 /* TrackWithFitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8780CB282386536F001643F7 /* TrackWithFitness.swift */; };
+		87B3201D238A38F00045D25E /* SurveyResultMultipliers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3201C238A38F00045D25E /* SurveyResultMultipliers.swift */; };
 		87F02A092383A35F00F914E9 /* MoodySpotifyLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F02A082383A35F00F914E9 /* MoodySpotifyLoginButton.swift */; };
 		CC1078D57458BEF7C600B5EE /* Pods_SpartanPods_SpartanTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EB1F775BC2F2E9075BA503 /* Pods_SpartanPods_SpartanTestAppTests.framework */; };
 		D58F68D01033A6A3E06F6319 /* Pods_SpartanPods_SpartanTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7FA9DA081C9ACFD2E1280C /* Pods_SpartanPods_SpartanTestApp.framework */; };
@@ -63,6 +65,8 @@
 		4EEE666D81EFE8C29FD3BFB9 /* Pods-SpartanPods-SpartanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanPods-SpartanTests.release.xcconfig"; path = "Target Support Files/Pods-SpartanPods-SpartanTests/Pods-SpartanPods-SpartanTests.release.xcconfig"; sourceTree = "<group>"; };
 		59AD1BC2792168E9B0B33CF6 /* Pods-SamplePods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamplePods-Sample.release.xcconfig"; path = "Target Support Files/Pods-SamplePods-Sample/Pods-SamplePods-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		61FE6C301D73F3DB7D4CCD1A /* Pods-SpartanPods-Spartan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanPods-Spartan.release.xcconfig"; path = "Target Support Files/Pods-SpartanPods-Spartan/Pods-SpartanPods-Spartan.release.xcconfig"; sourceTree = "<group>"; };
+		8780CB282386536F001643F7 /* TrackWithFitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackWithFitness.swift; sourceTree = "<group>"; };
+		87B3201C238A38F00045D25E /* SurveyResultMultipliers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultMultipliers.swift; sourceTree = "<group>"; };
 		87F02A082383A35F00F914E9 /* MoodySpotifyLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodySpotifyLoginButton.swift; sourceTree = "<group>"; };
 		A2EB1F775BC2F2E9075BA503 /* Pods_SpartanPods_SpartanTestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanPods_SpartanTestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C52280E97BDC29032F7F29 /* Pods-SamplePods-SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamplePods-SampleTests.release.xcconfig"; path = "Target Support Files/Pods-SamplePods-SampleTests/Pods-SamplePods-SampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				34BB01761F2D17CF004D796B /* LaunchScreen.storyboard */,
 				34BB01791F2D17CF004D796B /* Info.plist */,
 				87F02A082383A35F00F914E9 /* MoodySpotifyLoginButton.swift */,
+				8780CB282386536F001643F7 /* TrackWithFitness.swift */,
+				87B3201C238A38F00045D25E /* SurveyResultMultipliers.swift */,
 			);
 			path = SpartanTestApp;
 			sourceTree = "<group>";
@@ -378,7 +384,9 @@
 				34BB01701F2D17CF004D796B /* ViewController.swift in Sources */,
 				34BB016E1F2D17CF004D796B /* AppDelegate.swift in Sources */,
 				3432C73A1F2DDFE30001E70D /* LogInViewController.swift in Sources */,
+				8780CB292386536F001643F7 /* TrackWithFitness.swift in Sources */,
 				87F02A092383A35F00F914E9 /* MoodySpotifyLoginButton.swift in Sources */,
+				87B3201D238A38F00045D25E /* SurveyResultMultipliers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
