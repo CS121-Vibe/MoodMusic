@@ -6,6 +6,11 @@
 //  Copyright © 2019 Vibe. All rights reserved.
 //
 
+// TODO:
+// 1. Data Structure for camera roll/photo album
+// 2. Slider
+// 3. UI
+
 import AVFoundation
 import Foundation
 import Photos
