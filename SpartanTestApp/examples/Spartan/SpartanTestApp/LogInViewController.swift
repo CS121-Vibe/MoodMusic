@@ -47,7 +47,6 @@ class LogInViewController: UIViewController {
 
     @objc func loginSuccessful() {
         self.navigationController?.popViewController(animated: true)
-        print(SpotifyLogin.shared.username)
     }
     
     

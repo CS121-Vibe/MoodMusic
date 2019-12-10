@@ -87,11 +87,22 @@ class ViewController: UIViewController {
         })
     }
     
-    @IBAction func didTapCreateNewPlaylistWithSongParameters(_ sender: Any) {
-        let multiplier = getMultiplierFromSurveyResults(surveyResults: testAnswers)
+    @IBAction func createCalmPlaylist(_ sender: Any) {
+        generatePlaylist(playlistName: "Calm, Office Music", numSongs: 15, results: ["Calm", "Office"])
+    }
+    
+    @IBAction func createPartyPlaylist(_ sender: Any) {
+        generatePlaylist(playlistName: "Let's Get Rowdy!", numSongs: 30, results: ["Party", "Loud", ">10"])
+    }
+    
+    @IBAction func createBedroomPlaylist(_ sender: Any) {
+        generatePlaylist(playlistName: "Bedroom and Chill", numSongs: 10, results: ["Bedroom", "Calm"])
+    }
+    
+    func generatePlaylist(playlistName: String, numSongs: Int, results: [String]) {
+        let multiplier = getMultiplierFromSurveyResults(surveyResults: results)
         let userId = SpotifyLogin.shared.username!
         var fitnessTracks = [TrackWithFitness]()
-        let playlistName = testAnswers.description
         
         // retrieve songs
          _ = Spartan.getSavedTracks(limit: 50, offset: 0, market: .us, success: { (pagingObject) in
@@ -111,8 +122,7 @@ class ViewController: UIViewController {
                 fitnessTracks.sort(by: >)
                 var newTrackUris = [String]()
                 print("\nPost-sorted Tracks: ")
-                for i in 0..<10 {
-                    print(fitnessTracks[i].description)
+                for i in 0..<min(numSongs, pagingObject.items.count) {
                     newTrackUris.append(fitnessTracks[i].track.uri!)
                 }
                 print(newTrackUris)
@@ -134,8 +144,7 @@ class ViewController: UIViewController {
         }, failure: { (error) in
             print(error)
         })
-        // make new playlist
-        // add songs to playlist
+        
     }
     
 }
