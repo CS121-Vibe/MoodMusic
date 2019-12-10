@@ -19,22 +19,18 @@ import Spartan
 class ViewController: UIViewController {
 
     @IBOutlet weak var loggedInStackView: UIStackView!
-    
-    var testAnswers = ["Calm", "Office"]
-    
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // turns debugging on for making the network calls using Spartan
-        Spartan.loggingEnabled = true
+        // turns debugging off for making the network calls using Spartan
+        Spartan.loggingEnabled = false
         
         SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
             self?.loggedInStackView.alpha = (error == nil) ? 1.0 : 0.0
             if error != nil, token == nil {
                 self?.showLoginFlow()
             } else {
-                print(SpotifyLogin.shared.username)
                 
                 // sets the auth token so that spotify can make all the requests
                 Spartan.authorizationToken = token
@@ -72,7 +68,7 @@ class ViewController: UIViewController {
         })
     }
     
-    // this function creates a new playlist
+    // this function creates a new, empty playlist and alerts you when the action is complete
     @IBAction func didTapCreateNewPlaylist(_ sender: Any) {
         let userId = SpotifyLogin.shared.username!
         let name = "New Playlist"
@@ -87,18 +83,24 @@ class ViewController: UIViewController {
         })
     }
     
+    // When the "Create Playlist for the Office" button is pressed, this function runs"
     @IBAction func createCalmPlaylist(_ sender: Any) {
         generatePlaylist(playlistName: "Calm, Office Music", numSongs: 15, results: ["Calm", "Office"])
     }
     
+    // When the "Create Playlist for the Party" button is pressed, this function runs"
     @IBAction func createPartyPlaylist(_ sender: Any) {
         generatePlaylist(playlistName: "Let's Get Rowdy!", numSongs: 30, results: ["Party", "Loud", ">10"])
     }
     
+    // When the "Create Playlist for the Bedroom" button is pressed, this function runs"
     @IBAction func createBedroomPlaylist(_ sender: Any) {
         generatePlaylist(playlistName: "Bedroom and Chill", numSongs: 10, results: ["Bedroom", "Calm"])
     }
     
+    // this function generates a playlist through the spotify api based off of results fed
+    // through an array of strings denoting the parameters you want the playlist to be based
+    // off of
     func generatePlaylist(playlistName: String, numSongs: Int, results: [String]) {
         let multiplier = getMultiplierFromSurveyResults(surveyResults: results)
         let userId = SpotifyLogin.shared.username!
@@ -125,9 +127,11 @@ class ViewController: UIViewController {
                 for i in 0..<min(numSongs, pagingObject.items.count) {
                     newTrackUris.append(fitnessTracks[i].track.uri!)
                 }
-                print(newTrackUris)
                 
+                // create the new playlist
                 _ = Spartan.createPlaylist(userId: userId, name: playlistName, isPublic: true, isCollaborative: false, success: { (playlist) in
+                    
+                    // add filtered tracks to the new playlist
                     _ = Spartan.addTracksToPlaylist(userId: userId, playlistId: playlist.id as! String, trackUris: newTrackUris, success: { (snapshot) in
                         // Do something with the snapshot
                     }, failure: { (error) in
@@ -146,8 +150,5 @@ class ViewController: UIViewController {
         })
         
     }
-    
-}
 
-// Frank Ocean:
-// https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM?si=OaxmN3xEQ8yLoftQL66aGA
+}
