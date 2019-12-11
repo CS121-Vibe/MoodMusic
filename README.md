@@ -1,4 +1,4 @@
-ABOUT
+ABOUT  
 MoodMusic is an iOS app that creates customized playlists based on user preferences. 
 The app uses Spotify’s API for song categorization and playlist creation. 
 
