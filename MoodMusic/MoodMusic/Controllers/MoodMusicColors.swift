@@ -9,7 +9,7 @@ import UIKit
 import Foundation
     
 public class MoodMusicColors {
-      // extension UIColor {
+
         // SURVEY BACKGROUND
 
         static func moody_buttonPurple() -> UIColor {
@@ -23,7 +23,6 @@ public class MoodMusicColors {
         static func moody_spotifyButtonDarkPurple() -> UIColor {
             return UIColor(red: 76.0/255.0, green: 61.0/255.0, blue: 108.0/255.0, alpha: 1.0)
         }
-   // }
 }
 
 

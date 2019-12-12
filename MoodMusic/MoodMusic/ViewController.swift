@@ -20,8 +20,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     let allQuestions = QuestionBank()
     var questionNumber : Int = 0
     var answers = [String]()
-    
     var photoSetting = AVCapturePhotoSettings()
+    
+    // Data Structure for holding images
+    var imageList = [UIImage]()
     
     @IBOutlet weak var imagePicked: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -78,6 +80,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             vc.allowsEditing = false
             // Camera controller (default IOS animation)
             self.present(vc, animated: true, completion: nil)
+            
+            // TODO: Fix an error, returns "nil"
+            //       Cannot find the image
+            imageList.append(UIImage(named: "userImage")!)
         }
     }
     
@@ -91,6 +97,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
              vc.sourceType = .photoLibrary
              vc.allowsEditing = false
              self.present(vc, animated: true, completion: nil)
+            
+            // TODO: Fix an error, returns "nil"
+            //       Cannot find the image
+            //imageList.append(UIImage(named: "userImage")!)
          }
 
     }
