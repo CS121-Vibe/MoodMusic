@@ -10,6 +10,7 @@
 		384D3EB3238BADCF0012FC2D /* MoodMusicColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384D3EB2238BADCF0012FC2D /* MoodMusicColors.swift */; };
 		387DA1D2238CF27C00499B64 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 387DA1D1238CF27C00499B64 /* Logo.png */; };
 		38862A7A2383940100804530 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38862A792383940100804530 /* Launch Screen.storyboard */; };
+		38B7183623A2B2E9005C02C0 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7183523A2B2E9005C02C0 /* Slider.swift */; };
 		73B84CAFCB3BAAD99D345E13 /* Pods_MoodMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732D96DE89F1F14F0952A30E /* Pods_MoodMusic.framework */; };
 		8121587B237A66CB008A4E8D /* default-album-art.png in Resources */ = {isa = PBXBuildFile; fileRef = 8121587A237A66CB008A4E8D /* default-album-art.png */; };
 		87A3395C23680D7E00C2A2E0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A3395B23680D7E00C2A2E0 /* Question.swift */; };
@@ -25,6 +26,7 @@
 		384D3EB2238BADCF0012FC2D /* MoodMusicColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodMusicColors.swift; sourceTree = "<group>"; };
 		387DA1D1238CF27C00499B64 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../../../Logo.png; sourceTree = "<group>"; };
 		38862A792383940100804530 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		38B7183523A2B2E9005C02C0 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		732D96DE89F1F14F0952A30E /* Pods_MoodMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8121587A237A66CB008A4E8D /* default-album-art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-album-art.png"; sourceTree = "<group>"; };
 		87A3395B23680D7E00C2A2E0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				87A3395B23680D7E00C2A2E0 /* Question.swift */,
+				38B7183523A2B2E9005C02C0 /* Slider.swift */,
 				87A3395F236810E600C2A2E0 /* QuestionBank.swift */,
 			);
 			path = Models;
@@ -236,6 +239,7 @@
 				87FD6F0F2367F0CF00386462 /* AppDelegate.swift in Sources */,
 				87A33960236810E600C2A2E0 /* QuestionBank.swift in Sources */,
 				87FD6F112367F0CF00386462 /* SceneDelegate.swift in Sources */,
+				38B7183623A2B2E9005C02C0 /* Slider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

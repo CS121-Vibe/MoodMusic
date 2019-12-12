@@ -38,6 +38,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var showSliderValue: UILabel!
     
     var vc = UIImagePickerController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +47,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         photoSetting = AVCapturePhotoSettings.init(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
         photoSetting.isAutoStillImageStabilizationEnabled = true
         photoSetting.flashMode = .off
+        
+
    
     }
+        
+//        override func viewDidLayoutSubviews() {
+//          let margin: CGFloat = 20
+//          let width = view.bounds.width - 2 * margin
+//          let height: CGFloat = 30
+//
+//
+//        }
     
     @objc func sliderValue(sender: Any){
         self.showSliderValue.text = "\(self.slider.value)"
@@ -83,7 +94,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             
             // TODO: Fix an error, returns "nil"
             //       Cannot find the image
-            imageList.append(UIImage(named: "userImage")!)
+            //imageList.append(UIImage(named: "userImage")!)
         }
     }
     
@@ -177,12 +188,25 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func nextQuestion() {
         if questionNumber < 4 {
             updateUI()
+            if questionNumber == 2{
+        
+                let rangeSlider = Slider(frame: .zero)
+                rangeSlider.backgroundColor = MoodMusicColors.moody_spotifyButtonPurple()
+
+                let margin: CGFloat = 10
+                let width = view.bounds.width - 2 * margin
+                let height: CGFloat = 10
+                rangeSlider.frame = CGRect(x: 0, y: 30,
+                                           width: width, height: height)
+                rangeSlider.center = view.center
+                view.addSubview(rangeSlider)
+            }
         } else {
             self.view.backgroundColor =  MoodMusicColors.moody_buttonPurple()
 
             // Display an alert that the playlist is being generated
-            let alert = UIAlertController(title: "Awesome!", message: "We are generating your playlists", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            let alert = UIAlertController(title: "Awesome!", message: "We are generating your playlists! 🎵💥 ", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Sounds good!", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
             }))
             self.present(alert, animated: true, completion: nil)

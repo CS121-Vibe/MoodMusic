@@ -21,7 +21,8 @@ class QuestionBank {
         list.append(Question(text: "How many people?",
                              options: ["1", "2-4", "5-10", ">10"]))
         list.append(Question(text: "How loud?",
-        options: ["Calm", "Loud", "Party"]))
+                             //options: [Slider.rangeSlider]))
+       options: ["Calm", "Loud", "Party"]))
         
         list.append(Question(text: "How formal?",
         options: ["Formal", "Casual", "Not Formal"]))
