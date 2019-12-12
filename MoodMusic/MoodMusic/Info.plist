@@ -25,7 +25,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_ NAME) camera use</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_ NAME) photo use</string>
+	<string>We need access to your camera roll and photo library to proceed with Image Processing</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

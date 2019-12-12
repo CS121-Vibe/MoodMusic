@@ -6,11 +6,6 @@
 //  Copyright © 2019 Vibe. All rights reserved.
 //
 
-// TODO:
-// 1. Data Structure for camera roll/photo album
-// 2. Slider
-// 3. UI
-
 import AVFoundation
 import Foundation
 import Photos
@@ -40,8 +35,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var showSliderValue: UILabel!
     
+    var vc = UIImagePickerController()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -71,7 +66,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     //action function of camera button at the home page. it takes user from home page to camera
-    // TODO: Fix camera crash. Could be due to a failure to allocate enough memory
     @IBAction func cameraButtonPressed(_ sender: UIButton) {
         
         // Check if a camera is available on the device
@@ -92,21 +86,25 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func photosButtonPressed(_ sender: UIButton) {
         // Checks for access to Photo Library
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-             let vc = UIImagePickerController()
-             vc.delegate = self;
+             
+             vc.delegate = self
              vc.sourceType = .photoLibrary
              vc.allowsEditing = false
-            self.present(vc, animated: true, completion: nil)
+             self.present(vc, animated: true, completion: nil)
          }
+
     }
     
     //gets called by the image picker when an image was selected. You need to read it out of the info dictionary using the key .editedImage, but then you have a UIImage that you can do whatever you want with
-    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+  
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any], editingInfo: NSDictionary!){
+         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        self.dismiss(animated: true, completion: { () -> Void in
+
+        })
+
         imagePicked.image = image
-            dismiss(animated:true, completion: nil)
-        
-        }
+    }
     
     @objc func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
 
@@ -123,13 +121,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         nextQuestion()
     }
     
-//    @IBAction func showAlert(_ sender: Any) {
-//        let alertController = UIAlertController(title: "Awesome", message:
-//            "Wait just a bit, we are generating your playlists", preferredStyle: .alert)
-//        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-//
-//        self.present(alertController, animated: true, completion: nil)
-//    }
     
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
@@ -175,14 +166,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     // Advances to the next question in the question list
     func nextQuestion() {
         if questionNumber < 4 {
-            //questionLabel.text  = allQuestions.list[questionNumber].questionText
             updateUI()
         } else {
+            self.view.backgroundColor =  MoodMusicColors.moody_buttonPurple()
+
+            // Display an alert that the playlist is being generated
             let alert = UIAlertController(title: "Awesome!", message: "We are generating your playlists", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
             }))
             self.present(alert, animated: true, completion: nil)
+            
             
             viewPlaylists()
         }
