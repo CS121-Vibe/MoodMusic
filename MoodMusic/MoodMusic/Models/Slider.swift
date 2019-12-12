@@ -5,6 +5,7 @@
 //  Created by Nina on 12/12/19.
 //  Copyright © 2019 Vibe. All rights reserved.
 //
+// Created with the help of https://www.raywenderlich.com/7595-how-to-make-a-custom-control-tutorial-a-reusable-slider
 
 import Foundation
 import UIKit
@@ -59,6 +60,60 @@ public class Slider: UIControl {
       return CGPoint(x: x, y: (bounds.height - thumbImage.size.height) / 2.0)
     }
     
-    
+}
 
+extension Slider {
+    override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    // Tracks previous location
+    previousLocation = touch.location(in: self)
+    
+    // 2
+    if pointThumbImageView.frame.contains(previousLocation) {
+      pointThumbImageView.isHighlighted = true
+    }
+    
+    // 3
+    return pointThumbImageView.isHighlighted
+  }
+    
+    // Tracks current location
+    override public func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+      let location = touch.location(in: self)
+      
+      // 1
+      let deltaLocation = location.x - previousLocation.x
+      let deltaValue = (maximumValue - minimumValue) * deltaLocation / bounds.width
+      
+      previousLocation = location
+      
+      // Checks the boundaries
+      if pointThumbImageView.isHighlighted {
+        lowerValue += deltaValue
+        lowerValue = boundValue(lowerValue, toLowerValue: minimumValue,
+                                upperValue: upperValue)
+      }
+      
+        upperValue += deltaValue
+        upperValue = boundValue(upperValue, toLowerValue: lowerValue,
+                                upperValue: maximumValue)
+      // 3
+      CATransaction.begin()
+      CATransaction.setDisableActions(true)
+      
+      updateLayerFrames()
+      
+      CATransaction.commit()
+      
+      return true
+    }
+
+    // 4
+    private func boundValue(_ value: CGFloat, toLowerValue lowerValue: CGFloat,
+                            upperValue: CGFloat) -> CGFloat {
+      return min(max(value, lowerValue), upperValue)
+    }
+    
+    override public func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+      pointThumbImageView.isHighlighted = false
+    }
 }

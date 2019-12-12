@@ -188,17 +188,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func nextQuestion() {
         if questionNumber < 4 {
             updateUI()
-            if questionNumber == 2{
-        
+            if questionNumber == 1 || questionNumber == 2 {
+                
+                // Slider
                 let rangeSlider = Slider(frame: .zero)
                 rangeSlider.backgroundColor = MoodMusicColors.moody_spotifyButtonPurple()
 
+                // Location on the screen
                 let margin: CGFloat = 10
                 let width = view.bounds.width - 2 * margin
                 let height: CGFloat = 10
-                rangeSlider.frame = CGRect(x: 0, y: 30,
+                rangeSlider.frame = CGRect(x: 0, y: 300,
                                            width: width, height: height)
                 rangeSlider.center = view.center
+                rangeSlider.frame.origin.y = 300
                 view.addSubview(rangeSlider)
             }
         } else {
@@ -376,25 +379,4 @@ override func trackRect(forBounds bounds: CGRect) -> CGRect {
     return CGRect(origin: point, size: CGSize(width: bounds.width, height: 20))
 }
 
-
-
-// label.frame = CGRect(x:0, y:30, width: self.view.frame.width, height:  self.view.frame.height)
-// label.textColor = UIColor.white
-// label.backgroundColor = UIColor.purple
-// label.textAlignment = NSTextAlignment.center
-// label.numberOfLines = 2
-// label.font = UIFont(name: "Helvetica", size: 32)
-// self.view.addSubview(label)
-//
-// slider = UISlider(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20))
-// slider.center = self.view.center
-// // Spotify's loundess metrics ranges from -60 to 0, so we will make [0,60] range for user's convenience
-// slider.minimumValue = 0
-// slider.maximumValue = 60
-// slider.value = 30
-// slider.tintColor = UIColor.cyan
-// slider.thumbTintColor = UIColor.white
-// slider.isContinuous = true
-//
-// self.view.addSubview(slider)
 }
