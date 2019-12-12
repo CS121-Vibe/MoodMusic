@@ -123,7 +123,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         nextQuestion()
     }
     
-    
+//    @IBAction func showAlert(_ sender: Any) {
+//        let alertController = UIAlertController(title: "Awesome", message:
+//            "Wait just a bit, we are generating your playlists", preferredStyle: .alert)
+//        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+//
+//        self.present(alertController, animated: true, completion: nil)
+//    }
     
     // updates the UI to display all the info pertaining to the next question
     func updateUI() {
@@ -172,6 +178,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             //questionLabel.text  = allQuestions.list[questionNumber].questionText
             updateUI()
         } else {
+            let alert = UIAlertController(title: "Awesome!", message: "We are generating your playlists", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
             viewPlaylists()
         }
     
